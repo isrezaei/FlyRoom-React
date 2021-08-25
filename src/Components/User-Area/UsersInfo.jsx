@@ -13,7 +13,6 @@ export default function UsersInfo ({Value})
 
 
 
-    console.log(Profile)
 
     return (
         <div className='Users'>

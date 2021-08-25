@@ -3,19 +3,20 @@ import ChatArea from "../Chat-Area/Chat-Area";
 import ItemArea from "../Item-Area/Item-Area";
 import UserArea from "../User-Area/User-Area";
 
-import FakerData from "../Faker/Faker";
+import MessageFaker from "../Faker/Message-Faker";
 
 
 
 export default function MasterArea ()
 {
 
-    const [Avatar , SetAvatar] = useState()
+    const [FakeMessage , SetFakeMessage] = useState()
 
 
 
     useEffect(()=>{
 
+        SetFakeMessage(MessageFaker)
 
 
     } , [])
@@ -27,13 +28,11 @@ export default function MasterArea ()
 
 
 
-    console.log(Avatar)
-
       return (
          <div className='Master-Area'>
              <ItemArea/>
              <UserArea/>
-             <ChatArea/>
+             {FakeMessage && <ChatArea FakeMessage={FakeMessage}/>}
          </div>
       )
 }

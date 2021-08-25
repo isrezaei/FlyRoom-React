@@ -1,30 +1,229 @@
+
 .Chat-Area
 {
   width: 90%;
   height: 100%;
   background: darkorange;
   @include Flex(flex , row , center , center);
+  position: relative;
 
   .Parent-Chats
   {
     width: 95%;
     height: 95%;
     background: aliceblue;
+    overflow-y: scroll;
+    position: absolute;
     @include Flex(flex , column , flex-start , center);
 
-    .Heder-Chat
+    .Header-Chat
     {
       width: 100%;
       height: 10%;
       background: #d5da5c;
+      border-bottom: 3px solid black;
+      position: sticky;
+      @include Flex(flex , row , space-between , center);
+
+
+
+      .Header-Avatar
+      {
+        width: 20%;
+        height: 100%;
+        background: #9999fc;
+        @include Flex(flex , row , center , center);
+
+        .Avatar
+        {
+          width: 30%;
+          height: 100%;
+          background: #ec87c9;
+          @include Flex(flex , row , center , flex-start);
+
+          img
+          {
+            width: 55px;
+            height: 55px;
+            background: black;
+            margin-top: .5rem;
+            @include Two-Border-Radius(50px , 50px )
+          }
+        }
+        .Name-Status
+        {
+          width: 70%;
+          height: 100%;
+          background: #e82020;
+        }
+
+        .Name{
+          font: {
+            size: $Font-Size + 5;
+            weight: $Font-Weight;
+          };
+        }
+
+        .Status{
+          font: {
+            size: $Font-Size;
+            weight: $Font-Weight;
+          };
+        }
+
+
+
+      }
+
+
+      .Header-Sender-and-Reciver-Avatar
+      {
+        width: 20%;
+        height: 100%;
+        background: #1e44dc;
+        @include Flex(flex , row , flex-end , center);
+      }
+
+
+      .Click-To-Info
+      {
+        @include Flex(flex , row , center , center);
+        img
+        {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+
+
+      .Sender-Recive-Avatar
+      {
+        width: 50%;
+        height: 4rem;
+        background: fuchsia;
+        @include Flex(flex , row , center , center);
+
+        .Sender
+        {
+          width: 50px;
+          height: 50px;
+          background: #92f197;
+          border: 2px solid white;
+          z-index: 2;
+          @include Two-Border-Radius(50px ,50px)
+        }
+
+        .Reciver{
+          @extend .Sender ;
+          transform: translatex(65%);
+          z-index: 1;
+          background: #4eb1d0;
+        }
+
+      }
+
+      .Click-To-Info
+      {
+        width: 20%;
+        height: 4rem;
+        background: #ff0000;
+      }
+
+
     }
 
-    .Body-Chat
+
+
+    .Body-Chat-Right
     {
       width: 100%;
-      height: 90%;
       background: #4eb1d0;
+      @include Flex(flex , column , flex-start , flex-end);
+
+      .Send-Message
+      {
+        width: 50%;
+        height: 10rem;
+        background: #653eea;
+        @include Flex(flex , row , flex-end , start);
+        @include Two-Margin-Padding(1rem , 1rem );
+      }
+      .Avatar-Area
+      {
+        width: 10%;
+        height: 100%;
+        background: white;
+        @include Flex(flex , row , center , flex-end);
+
+        .Message-Avatar
+        {
+          width: 50px;
+          height: 50px;
+          background: darkseagreen;
+          @include Two-Border-Radius(50px , 50px);
+
+        }
+      }
+
+      .Text-Area
+      {
+        width: 50%;
+        height: 80%;
+        background: #9dc0e5;
+        @include Two-Border-Radius(10px , 10px);
+        @include Two-Margin-Padding(1rem , .5rem)
+      }
+
     }
+
+    .Body-Chat-Left
+    {
+      width: 100%;
+      background: #4eb1d0;
+      @include Flex(flex , column , flex-start , flex-start);
+
+      .Send-Message
+      {
+        width: 50%;
+        height: 10rem;
+        background: #653eea;
+        @include Flex(flex , row , flex-start , end);
+        @include Two-Margin-Padding(1rem , 1rem );
+      }
+      .Avatar-Area
+      {
+        width: 10%;
+        height: 100%;
+        background: white;
+        order: 1;
+        @include Flex(flex , row , center , flex-end);
+
+        .Message-Avatar
+        {
+          width: 50px;
+          height: 50px;
+          background: darkseagreen;
+          @include Two-Border-Radius(50px , 50px);
+
+        }
+      }
+
+      .Text-Area
+      {
+        width: 50%;
+        height: 80%;
+        background: #9dc0e5;
+        order: 2;
+        @include Two-Border-Radius(10px , 10px);
+        @include Two-Margin-Padding(1rem , .5rem)
+      }
+
+    }
+
+
+
+
 
   }
 }

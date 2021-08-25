@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 
-$Font-Size : '16px';
-$Font-Weight : '700';
+$Font-Size : 16px;
+$Font-Weight : 700;
 $Font-Family : 'Lato', sans-serif;
 
 @mixin All-Margin-Padding($top , $left , $bottom , $right , $margin:true){

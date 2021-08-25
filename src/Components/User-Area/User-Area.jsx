@@ -21,15 +21,11 @@ export default function UserArea({Avatar})
 
 
 
-    console.log(Faker)
-
     return (
         <div className='User-Area'>
 
             <div className='Groups'></div>
             <div className='Parent-Users'>{User}</div>
-
-
         </div>
     )
 }
