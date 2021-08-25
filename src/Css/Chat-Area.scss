@@ -1,0 +1,31 @@
+.Chat-Area
+{
+  width: 90%;
+  height: 100%;
+  background: darkorange;
+  @include Flex(flex , row , center , center);
+
+  .Parent-Chats
+  {
+    width: 95%;
+    height: 95%;
+    background: aliceblue;
+    @include Flex(flex , column , flex-start , center);
+
+    .Heder-Chat
+    {
+      width: 100%;
+      height: 10%;
+      background: #d5da5c;
+    }
+
+    .Body-Chat
+    {
+      width: 100%;
+      height: 90%;
+      background: #4eb1d0;
+    }
+
+  }
+}
+

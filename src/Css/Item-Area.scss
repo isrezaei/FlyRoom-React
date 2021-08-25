@@ -1,0 +1,54 @@
+.Item-Area
+{
+  width: 10%;
+  height: 100%;
+  background: #9999fc;
+  @include Flex(flex , row , center , center);
+
+  .ParentIcon
+  {
+    width: 70%;
+    height: 90%;
+    background: darkseagreen;
+    @include Flex(flex , Column , space-between , center);
+
+    .Logo
+    {
+      width: 100%;
+      height: 7rem;
+      background: #d5da5c;
+      @include Flex(flex , row , center , center);
+    }
+
+    .Item
+    {
+      width: 100%;
+      background: aliceblue;
+      @include Flex(flex , Column , space-between , center);
+
+      div
+      {
+        @include Two-Margin-Padding( 1.5rem , 0 );
+
+        img
+        {
+          width: 35px;
+          height: 35px;
+          opacity: 1;
+        }
+      }
+
+      .MyProfile
+      {
+        img
+        {
+          width: 55px;
+          height: 55px;
+          background: black;
+          @include Two-Border-Radius(50px , 50px)
+        }
+      }
+    }
+  }
+}
+

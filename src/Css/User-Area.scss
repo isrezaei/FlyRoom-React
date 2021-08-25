@@ -1,0 +1,81 @@
+.User-Area
+{
+  width: 30%;
+  height: 100%;
+  background: crimson;
+  @include Flex(flex , column , flex-start , center);
+  overflow-y: scroll;
+}
+
+
+.Parent-Users
+{
+  width: 90%;
+  margin: 1rem;
+  background: aliceblue;
+
+  .Users
+  {
+    width: 100%;
+    height: 7rem;
+    background: #0d7ce7;
+    box-sizing: border-box;
+    @include Two-Margin-Padding( 1rem , auto , true);
+    @include Two-Margin-Padding( .5rem , 0rem , false);
+    @include Flex(flex , row , center , center)
+  }
+
+  .Avatar
+  {
+    width: 25%;
+    height: 100%;
+    background: darkseagreen;
+    @include Flex(flex , row , center , flex-start);
+
+    img{
+      width: 65px;
+      height: 65px;
+      @include Two-Border-Radius(50px , 50px)
+    }
+  }
+
+  .Info
+  {
+    width: 75%;
+    height: 100%;
+    background: #bc03cb;
+    @include Flex(flex , column , center , center);
+
+    .TimeAndInfo
+    {
+      width: 100%;
+      height: 50%;
+      background: #4eb1d0;
+      @include Flex(flex , row , space-around , center);
+
+
+      .Name
+      {
+
+      }
+
+      .Time
+      {
+
+      }
+
+    }
+
+    .PrevMessage
+    {
+      width: 100%;
+      height: 50%;
+      background: #d5da5c;
+    }
+
+  }
+
+}
+
+
+

@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+$Font-Size : '16px';
+$Font-Weight : '700';
+$Font-Family : 'Lato', sans-serif;
+
+@mixin All-Margin-Padding($top , $left , $bottom , $right , $margin:true){
+  @if($margin){
+    margin: $top $left $bottom $right;
+  }
+  @else {
+    padding: $top $left $bottom $right;
+  }
+}
+
+@mixin Two-Margin-Padding($top-bottom , $Left-right , $margin:true){
+  @if($margin){
+    margin: $top-bottom $Left-right;
+  }
+  @else {
+    padding: $top-bottom $Left-right;
+  }
+}
+
+@mixin All-Border-Radius($top , $left , $bottom , $right){
+  border-radius: $top $left $bottom $right ;
+}
+
+@mixin Two-Border-Radius($Top-Left , $bottom-Right){
+  border-radius: $Top-Left $bottom-Right;
+}
+
+@mixin Flex($display : flex , $direction : row , $jastify : center , $align : center){
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $jastify;
+  align-items:$align;
+}
+
+body{
+  font-family:$Font-Family;
+}
+
+@import "Reset.css";
+@import "Master-Area";
+@import "Chat-Area";
+@import "Item-Area";
+@import "User-Area";
