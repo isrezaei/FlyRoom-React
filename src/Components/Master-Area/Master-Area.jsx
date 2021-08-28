@@ -10,13 +10,14 @@ import MessageFaker from "../Faker/Message-Faker";
 export default function MasterArea ()
 {
 
-    const [FakeMessage , SetFakeMessage] = useState()
+    const [FakeMessage , SetFakeMessage] = useState(
+        {
+            Message : MessageFaker(5)
+        })
 
 
 
     useEffect(()=>{
-
-        SetFakeMessage(MessageFaker)
 
 
     } , [])
@@ -25,14 +26,20 @@ export default function MasterArea ()
 
 
 
+    const UpdateMessage = () => {
+        return SetFakeMessage( {Message: [...MessageFaker(5) , ...FakeMessage.Message]})
+    }
 
 
 
-      return (
-         <div className='Master-Area'>
-             <ItemArea/>
-             <UserArea/>
-             {FakeMessage && <ChatArea FakeMessage={FakeMessage}/>}
-         </div>
-      )
+    console.log(FakeMessage.Message)
+
+
+    return (
+        <div className='Master-Area'>
+            <ItemArea/>
+            <UserArea/>
+            {FakeMessage.Message &&  <ChatArea MessageLenght={FakeMessage} UpdateMessage={UpdateMessage}/>}
+        </div>
+    )
 }

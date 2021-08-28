@@ -4,141 +4,144 @@
   width: 90%;
   height: 100%;
   background: darkorange;
-  @include Flex(flex , row , center , center);
-  position: relative;
+  @include Flex(flex , column , center , center);
 
-  .Parent-Chats
+
+
+  .Header-Chat
   {
     width: 95%;
-    height: 95%;
-    background: aliceblue;
-    overflow-y: scroll;
-    position: absolute;
-    @include Flex(flex , column , flex-start , center);
+    height: 10%;
+    background: #d5da5c;
+    border-bottom: 3px solid black;
+    @include Flex(flex , row , space-between , center);
 
-    .Header-Chat
+
+
+    .Header-Avatar
     {
-      width: 100%;
-      height: 10%;
-      background: #d5da5c;
-      border-bottom: 3px solid black;
-      position: sticky;
-      @include Flex(flex , row , space-between , center);
+      width: 20%;
+      height: 100%;
+      background: #9999fc;
+      @include Flex(flex , row , center , center);
 
-
-
-      .Header-Avatar
+      .Avatar
       {
-        width: 20%;
+        width: 30%;
         height: 100%;
-        background: #9999fc;
-        @include Flex(flex , row , center , center);
+        background: #ec87c9;
+        @include Flex(flex , row , center , flex-start);
 
-        .Avatar
-        {
-          width: 30%;
-          height: 100%;
-          background: #ec87c9;
-          @include Flex(flex , row , center , flex-start);
-
-          img
-          {
-            width: 55px;
-            height: 55px;
-            background: black;
-            margin-top: .5rem;
-            @include Two-Border-Radius(50px , 50px )
-          }
-        }
-        .Name-Status
-        {
-          width: 70%;
-          height: 100%;
-          background: #e82020;
-        }
-
-        .Name{
-          font: {
-            size: $Font-Size + 5;
-            weight: $Font-Weight;
-          };
-        }
-
-        .Status{
-          font: {
-            size: $Font-Size;
-            weight: $Font-Weight;
-          };
-        }
-
-
-
-      }
-
-
-      .Header-Sender-and-Reciver-Avatar
-      {
-        width: 20%;
-        height: 100%;
-        background: #1e44dc;
-        @include Flex(flex , row , flex-end , center);
-      }
-
-
-      .Click-To-Info
-      {
-        @include Flex(flex , row , center , center);
         img
         {
-          width: 30px;
-          height: 30px;
+          width: 55px;
+          height: 55px;
+          background: black;
+          margin-top: .5rem;
+          @include Two-Border-Radius(50px , 50px )
         }
       }
-
-
-
-      .Sender-Recive-Avatar
+      .Name-Status
       {
-        width: 50%;
-        height: 4rem;
-        background: fuchsia;
-        @include Flex(flex , row , center , center);
-
-        .Sender
-        {
-          width: 50px;
-          height: 50px;
-          background: #92f197;
-          border: 2px solid white;
-          z-index: 2;
-          @include Two-Border-Radius(50px ,50px)
-        }
-
-        .Reciver{
-          @extend .Sender ;
-          transform: translatex(65%);
-          z-index: 1;
-          background: #4eb1d0;
-        }
-
+        width: 70%;
+        height: 100%;
+        background: #e82020;
       }
 
-      .Click-To-Info
-      {
-        width: 20%;
-        height: 4rem;
-        background: #ff0000;
+      .Name{
+        font: {
+          size: $Font-Size + 5;
+          weight: $Font-Weight;
+        };
       }
+
+      .Status{
+        font: {
+          size: $Font-Size;
+          weight: $Font-Weight;
+        };
+      }
+
 
 
     }
 
 
+    .Header-Sender-and-Reciver-Avatar
+    {
+      width: 20%;
+      height: 100%;
+      background: #1e44dc;
+      @include Flex(flex , row , flex-end , center);
+    }
+
+
+    .Click-To-Info
+    {
+      @include Flex(flex , row , center , center);
+      img
+      {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+
+
+    .Sender-Recive-Avatar
+    {
+      width: 50%;
+      height: 4rem;
+      background: fuchsia;
+      @include Flex(flex , row , center , center);
+
+      .Sender
+      {
+        width: 50px;
+        height: 50px;
+        background: #92f197;
+        border: 2px solid white;
+        z-index: 2;
+        @include Two-Border-Radius(50px ,50px)
+      }
+
+      .Reciver{
+        @extend .Sender ;
+        transform: translatex(65%);
+        z-index: 1;
+        background: #4eb1d0;
+      }
+
+    }
+
+    .Click-To-Info
+    {
+      width: 20%;
+      height: 4rem;
+      background: #ff0000;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+  .Parent-Chats
+  {
+    width: 95%;
+    height: 90%;
+    background: aliceblue;
+    overflow-y: scroll;
+    @include Flex(flex , column , flex-start , center);
 
     .Body-Chat-Right
     {
       width: 100%;
-      background: #4eb1d0;
       @include Flex(flex , column , flex-start , flex-end);
 
       .Send-Message
@@ -180,7 +183,6 @@
     .Body-Chat-Left
     {
       width: 100%;
-      background: #4eb1d0;
       @include Flex(flex , column , flex-start , flex-start);
 
       .Send-Message
