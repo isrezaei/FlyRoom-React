@@ -1,13 +1,21 @@
 import React , {useState , useEffect} from "react";
 
-export default function UsersInfo ({Value})
+export default function UserInfo ({Value})
 {
     const [Profile , SetProfile] = useState()
+    const [Name ,SetName] = useState()
+    const [LastName ,SetLastName] = useState()
+    const [Time ,SetTime] = useState()
+    const [Sentence , SetSentence] = useState()
 
 
     useEffect(()=> {
 
         SetProfile(Value.avatar)
+        SetName(Value.name)
+        SetLastName(Value.lastName)
+        SetTime(Value.time)
+        SetSentence(Value.sentence)
 
     } , [])
 
@@ -25,15 +33,16 @@ export default function UsersInfo ({Value})
 
                 <div className='TimeAndInfo'>
                     <div className='Name'>
-                        {Value.name} {Value.lastName}
+                        {Name} {LastName}
                     </div>
+
                     <div className='Time'>
-                        {Value.time}
+                        {Time}
                     </div>
                 </div>
 
                 <div className='PrevMessage'>
-                    {Value.sentence}
+                    {SetSentence}
                 </div>
 
             </div>

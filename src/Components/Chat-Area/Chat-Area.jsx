@@ -15,6 +15,7 @@ export default function ChatArea ({FakeMessage , UpdateMessage , MessageLenght})
 
         SetRefBodyMessage(RefBodyChat)
 
+
     } , [MessageLenght])
 
 

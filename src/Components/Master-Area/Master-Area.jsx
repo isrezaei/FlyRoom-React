@@ -12,7 +12,7 @@ export default function MasterArea ()
 
     const [FakeMessage , SetFakeMessage] = useState(
         {
-            Message : MessageFaker(5)
+            Message : MessageFaker(10)
         })
 
 
@@ -27,12 +27,12 @@ export default function MasterArea ()
 
 
     const UpdateMessage = () => {
-        return SetFakeMessage( {Message: [...MessageFaker(5) , ...FakeMessage.Message]})
+        return SetFakeMessage( {Message: [...MessageFaker(10) , ...FakeMessage.Message]})
     }
 
 
 
-    console.log(FakeMessage.Message)
+
 
 
     return (

@@ -1,25 +1,13 @@
 import React , {useState , useEffect} from "react";
-import FakerData from "../Faker/Faker";
-import UsersInfo from "./UsersInfo";
+import FakerData from "../Faker/Faker-Data";
+import UserInfo from "./User-Info";
 
 export default function UserArea({Avatar})
 {
-    const [Faker , SetFaker] = useState()
-
-
-    useEffect(()=>{
-
-        SetFaker(FakerData)
-
-    } , [])
-
-
 
    const User = FakerData().map( (value , index)=> {
-        return <UsersInfo key={index} Value={value} Avatar={Avatar}/>
+        return <UserInfo key={index} Value={value} Avatar={Avatar}/>
     })
-
-
 
     return (
         <div className='User-Area'>
