@@ -105,7 +105,7 @@ export default class LeftRightChat extends Component{
                     {FakeMessage}
                 </div>
 
-                <div className='Send-Chat'>
+                <div className='Footer-Input-Chat'>
 
                     <div className='Input-Button'>
 

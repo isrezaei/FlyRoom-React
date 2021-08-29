@@ -45,19 +45,24 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght})
                         <div className='Avatar'>
                             <img/>
                         </div>
-                        <div className='Name-Status'>
+                        <div className='Name-StatusType'>
                             <p className='Name'>Ollie Chandler</p>
-                            <p className='Status'>is typing...</p>
+                            <p className='Status'>Last Seen Recently</p>
                         </div>
 
                     </div>
-                    <div className= 'Header-Sender-and-Reciver-Avatar'>
-                        <div className='Click-To-Info'>
-                            <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
-                        </div>
-                        <div className='Sender-Recive-Avatar'>
+                    <div className= 'Header-Sender-and-Reciver-Avatar-Info'>
+
+                        <div className='Sender-Recive-Avatar-Info'>
+
+                            <div className='Click-To-Info'>
+                                <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
+                            </div>
+
                             <img className='Reciver'/>
                             <img className='Sender'/>
+
+
                         </div>
                     </div>
                 </div>
