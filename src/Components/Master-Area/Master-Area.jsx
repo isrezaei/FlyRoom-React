@@ -4,6 +4,7 @@ import ItemArea from "../Item-Area/Item-Area";
 import UserArea from "../User-Area/User-Area";
 
 import MessageFaker from "../Faker/Message-Faker";
+import {ne} from "faker/lib/locales";
 
 
 
@@ -12,7 +13,7 @@ export default function MasterArea ()
 
     const [FakeMessage , SetFakeMessage] = useState(
         {
-            Message : MessageFaker(10)
+            Message : MessageFaker(20)
         })
 
 
@@ -27,10 +28,28 @@ export default function MasterArea ()
 
 
     const UpdateMessage = () => {
-        return SetFakeMessage( {Message: [...MessageFaker(10) , ...FakeMessage.Message]})
+        return SetFakeMessage( {Message: [...MessageFaker(20) , ...FakeMessage.Message]})
     }
 
 
+    const SendMessage = (value) => {
+
+        console.log(value)
+
+        SetFakeMessage(
+            {
+                Message: [...FakeMessage.Message ,
+                    {
+                        sentence : value ,
+                        checked : true ,
+                        time : new Date().toLocaleTimeString()
+                    }
+                ]
+
+
+            })
+
+    }
 
 
 
@@ -39,7 +58,7 @@ export default function MasterArea ()
         <div className='Master-Area'>
             <ItemArea/>
             <UserArea/>
-            {FakeMessage.Message &&  <ChatArea MessageLenght={FakeMessage} UpdateMessage={UpdateMessage}/>}
+            {FakeMessage.Message &&  <ChatArea MessageLenght={FakeMessage} UpdateMessage={UpdateMessage} SendMessage={SendMessage}/>}
         </div>
     )
 }

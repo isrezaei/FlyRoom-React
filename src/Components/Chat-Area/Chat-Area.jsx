@@ -1,7 +1,7 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
-export default function ChatArea ({FakeMessage , UpdateMessage , MessageLenght})
+export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght})
 {
 
 
@@ -16,6 +16,7 @@ export default function ChatArea ({FakeMessage , UpdateMessage , MessageLenght})
         SetRefBodyMessage(RefBodyChat)
 
 
+
     } , [MessageLenght])
 
 
@@ -27,7 +28,6 @@ export default function ChatArea ({FakeMessage , UpdateMessage , MessageLenght})
             UpdateMessage()
         }
     }
-
 
 
 
@@ -63,8 +63,11 @@ export default function ChatArea ({FakeMessage , UpdateMessage , MessageLenght})
                 </div>
 
                 <div onScroll={HandeleScroll} ref={RefBodyChat} className='Parent-Chats'>
-                    {MessageLenght && RefBodyMessage && <LeftRightChat RefBodyMessage={RefBodyMessage} MessageLenght={MessageLenght} />}
+                    {MessageLenght && RefBodyMessage && <LeftRightChat RefBodyMessage={RefBodyMessage} MessageLenght={MessageLenght} SendMessage={SendMessage}/>}
                 </div>
+
+
+
 
             </div>
         )

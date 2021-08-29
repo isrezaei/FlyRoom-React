@@ -13,7 +13,7 @@ export default function FakerData()
             name : fakerData.name.firstName(),
             lastName : fakerData.name.lastName(),
             avatar : fakerData.image.avatar(),
-            time : fakerData.date.recent().toLocaleTimeString()
+            time : fakerData.date.recent().toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit'})
         })
     }
 

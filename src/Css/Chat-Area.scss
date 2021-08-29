@@ -125,19 +125,21 @@
   }
 
 
-
-
-
-
-
-
   .Parent-Chats
   {
     width: 95%;
     height: 90%;
-    background: aliceblue;
+    background: #ffffff;
     overflow-y: scroll;
     @include Flex(flex , column , flex-start , center);
+
+
+    .Fake-Message-Block
+    {
+      width: 100%;
+      margin-bottom: 5.5rem;
+    }
+
 
     .Body-Chat-Right
     {
@@ -147,16 +149,14 @@
       .Send-Message
       {
         width: 50%;
-        height: 10rem;
-        background: #653eea;
-        @include Flex(flex , row , flex-end , start);
-        @include Two-Margin-Padding(1rem , 1rem );
+        height: auto;
+        @include Flex(flex , row , flex-end , flex-end);
+        @include Two-Margin-Padding(0rem , 1rem );
       }
       .Avatar-Area
       {
         width: 10%;
         height: 100%;
-        background: white;
         @include Flex(flex , row , center , flex-end);
 
         .Message-Avatar
@@ -171,13 +171,39 @@
 
       .Text-Area
       {
-        width: 50%;
-        height: 80%;
-        background: #9dc0e5;
+        width: 70%;
+        height: auto;
+        background: #d7f1a4;
+        box-sizing: border-box;
+        @include Flex(flex , column , center , space-between);
         @include Two-Border-Radius(10px , 10px);
-        @include Two-Margin-Padding(1rem , .5rem)
+        @include Two-Margin-Padding(1rem , .5rem);
+        @include Two-Margin-Padding(.3rem , .8rem , false)
       }
 
+      .Sentence
+      {
+        width: 100%;
+        width: 100%;
+        text-align: left;
+        font : {
+          size: $Font-Size;
+          weight: $Font-Weight ;
+        }
+        @include All-Margin-Padding( .5rem, 0, .5rem, 0, false)
+      }
+
+      .Time
+      {
+        width: 100%;
+        text-align: right;
+        font : {
+          size: $Font-Size - 3;
+          weight: $Font-Weight ;
+        }
+
+        @include All-Margin-Padding( .5rem, 0, .2rem, 0, false)
+      }
     }
 
     .Body-Chat-Left
@@ -188,16 +214,14 @@
       .Send-Message
       {
         width: 50%;
-        height: 10rem;
-        background: #653eea;
-        @include Flex(flex , row , flex-start , end);
-        @include Two-Margin-Padding(1rem , 1rem );
+        height: auto;
+        @include Flex(flex , row , flex-start , flex-end);
+        @include Two-Margin-Padding(0rem , 1rem );
       }
       .Avatar-Area
       {
         width: 10%;
         height: 100%;
-        background: white;
         order: 1;
         @include Flex(flex , row , center , flex-end);
 
@@ -213,20 +237,119 @@
 
       .Text-Area
       {
-        width: 50%;
-        height: 80%;
-        background: #9dc0e5;
+        width: 70%;
+        height: auto;
+        background: #7db4c9;
+        box-sizing: border-box;
         order: 2;
+        @include Flex(flex , column , center , space-between);
         @include Two-Border-Radius(10px , 10px);
-        @include Two-Margin-Padding(1rem , .5rem)
+        @include Two-Margin-Padding(1rem , .5rem);
+        @include Two-Margin-Padding(.3rem , .8rem , false)
+      }
+
+      .Sentence
+      {
+        width: 100%;
+        width: 100%;
+        text-align: left;
+        font : {
+          size: $Font-Size;
+          weight: $Font-Weight ;
+        }
+        @include All-Margin-Padding( .5rem, 0, .5rem, 0, false)
+      }
+
+      .Time
+      {
+        width: 100%;
+        text-align: right;
+        font : {
+          size: $Font-Size - 3;
+          weight: $Font-Weight ;
+        }
+
+        @include All-Margin-Padding( .5rem, 0, .2rem, 0, false)
       }
 
     }
-
-
-
-
-
   }
+
+  .Send-Chat
+  {
+    width: 64%;
+    height: 5rem;
+    background: aquamarine;
+    position: fixed;
+    bottom: 0;
+
+    backdrop-filter: blur(3px) saturate(180%);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.4);
+
+    .Input-Button
+    {
+      width: 99%;
+      height: 3.5rem;
+      margin: auto;
+      background: #ebf1f7;
+      @include Two-Border-Radius(50px , 50px);
+      @include Flex(flex , row , space-around , center);
+
+      .Attach-File
+      {
+        img
+        {
+          width: 25px;
+          height: 25px;
+          opacity: 60%;
+          cursor: pointer;
+        }
+      }
+
+      .Input-Search
+      {
+        width: 85%;
+        height: 2.5rem;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: transparent;
+      }
+
+      .Emoji
+      {
+        img
+        {
+          width: 25px;
+          height: 25px;
+          opacity: 60%;
+          cursor: pointer;
+        }
+      }
+
+      .Search-Button
+      {
+        width: 45px;
+        height: 45px;
+        outline: none;
+        border: none;
+        background: #5959ff;
+        cursor: pointer;
+        @include Two-Border-Radius(50px , 50px);
+
+        img
+        {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+
+    }
+  }
+
+
+
 }
 
