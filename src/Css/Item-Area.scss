@@ -2,53 +2,66 @@
 {
   width: 10%;
   height: 100%;
-  background: #9999fc;
+  background: #ffffff;
   @include Flex(flex , row , center , center);
 
   .ParentIcon
   {
     width: 70%;
-    height: 90%;
-    background: darkseagreen;
+    height: 100%;
     @include Flex(flex , Column , space-between , center);
 
     .Logo
     {
       width: 100%;
       height: 7rem;
-      background: #d5da5c;
       @include Flex(flex , row , center , center);
+      @include Two-Margin-Padding(2rem , 2rem , false);
+
+      img
+      {
+        width: 80px;
+        height: 80px;
+      }
     }
 
     .Item
     {
       width: 100%;
-      background: aliceblue;
+      margin-top: 6rem;
       @include Flex(flex , Column , space-between , center);
 
       div
       {
-        @include Two-Margin-Padding( 1.5rem , 0 );
+        @include Two-Margin-Padding( 2rem , 0 );
 
         img
         {
           width: 35px;
           height: 35px;
-          opacity: 1;
+          opacity: 60%;
         }
       }
 
-      .MyProfile
+
+    }
+
+    .MyProfile
+    {
+
+      width: 100%;
+      @include Flex();
+      margin-bottom: 5rem;
+
+      img
       {
-        img
-        {
-          width: 55px;
-          height: 55px;
-          background: black;
-          @include Two-Border-Radius(50px , 50px)
-        }
+        width: 55px;
+        height: 55px;
+        background: #66deaa;
+        @include Two-Border-Radius(50px , 50px)
       }
     }
+
   }
 }
 
