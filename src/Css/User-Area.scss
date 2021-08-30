@@ -69,17 +69,19 @@
   {
     width: 90%;
     margin: 1rem;
-    background: aliceblue;
     margin: auto;
 
     .Users
     {
       width: 100%;
-      height: 7rem;
-      background: #0d7ce7;
+      height: 8.5rem;
+      background: #ffffff;
       box-sizing: border-box;
+      -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.09);
+      box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
       @include Two-Margin-Padding( 1rem , auto , true);
-      @include Two-Margin-Padding( .5rem , 0rem , false);
+      @include Two-Margin-Padding( 1rem , 0rem , false);
+      @include Two-Border-Radius(15px , 15px);
       @include Flex(flex , row , center , center)
     }
 
@@ -87,7 +89,6 @@
     {
       width: 25%;
       height: 100%;
-      background: darkseagreen;
       @include Flex(flex , row , center , flex-start);
 
       img{
@@ -101,34 +102,56 @@
     {
       width: 75%;
       height: 100%;
-      background: #bc03cb;
+      margin-right: 1rem;
       @include Flex(flex , column , center , center);
 
       .TimeAndInfo
       {
         width: 100%;
-        height: 50%;
-        background: #4eb1d0;
-        @include Flex(flex , row , space-around , center);
+        height: auto;
+        box-sizing: border-box;
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        @include Flex(flex , row , space-between , center);
 
 
-        .Name
-        {
 
-        }
+          .Name-LastName
+          {
+            font: {
+              size: $Font-Size + 5;
+              weight: $Font-Weight;
+            };
 
-        .Time
-        {
+          }
 
-        }
+          .Time
+          {
+
+            color: rgba(0,0,0,0.4);
+            font: {
+              size: $Font-Size - 3;
+              weight: $Font-Weight;
+            };
+
+          }
+
+
+
+
 
       }
 
       .PrevMessage
       {
         width: 100%;
-        height: 50%;
-        background: #d5da5c;
+        height: auto;
+        box-sizing: border-box;
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        font-size: $Font-Size + 2;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
       }
 
     }

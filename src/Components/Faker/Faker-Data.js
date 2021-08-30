@@ -1,3 +1,5 @@
+import faker from "faker";
+
 var fakerData = require('faker');
 
 export default function FakerData()
@@ -13,6 +15,7 @@ export default function FakerData()
             name : fakerData.name.firstName(),
             lastName : fakerData.name.lastName(),
             avatar : fakerData.image.avatar(),
+            sentence : faker.lorem.sentence(),
             time : fakerData.date.recent().toLocaleTimeString([],{ hour: '2-digit', minute: '2-digit'})
         })
     }

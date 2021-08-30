@@ -145,7 +145,7 @@
     .Fake-Message-Block
     {
       width: 100%;
-      margin-bottom: 5.5rem;
+      margin-bottom: 9rem;
     }
 
 
@@ -286,7 +286,7 @@
   .Footer-Input-Chat
   {
     width: 66%;
-    height: 5rem;
+    height: 7rem;
     position: fixed;
     bottom: 0;
     backdrop-filter: blur(3px) saturate(180%);
@@ -296,7 +296,7 @@
     .Input-Button
     {
       width: 99%;
-      height: 3.5rem;
+      height: 5rem;
       margin: auto;
       background: #ebf1f7;
       @include Two-Border-Radius(50px , 50px);

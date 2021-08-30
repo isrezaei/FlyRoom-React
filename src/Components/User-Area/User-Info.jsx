@@ -32,17 +32,24 @@ export default function UserInfo ({Value})
             <div className='Info'>
 
                 <div className='TimeAndInfo'>
-                    <div className='Name'>
-                        {Name} {LastName}
-                    </div>
+
+
+
+                        <p className='Name-LastName'>
+                            {Name} {LastName}
+                        </p>
+
+
 
                     <div className='Time'>
                         {Time}
                     </div>
+
+
                 </div>
 
                 <div className='PrevMessage'>
-                    {SetSentence}
+                    {Sentence}
                 </div>
 
             </div>
