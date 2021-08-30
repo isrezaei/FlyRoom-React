@@ -125,9 +125,6 @@ export default class LeftRightChat extends Component{
 
                         <button className='Search-Button' onClick={this.SendInputSearchValue}>
                             <img src={SendLogo}/>
-
-
-
                         </button>
 
                     </div>

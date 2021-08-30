@@ -2,80 +2,142 @@
 {
   width: 30%;
   height: 100%;
-  background: crimson;
-  @include Flex(flex , column , flex-start , center);
-  overflow-y: scroll;
-}
+  background: #f6f9fb;
+  overflow: {
+    x : hidden;
+    y: scroll;
+  };
 
 
-.Parent-Users
-{
-  width: 90%;
-  margin: 1rem;
-  background: aliceblue;
 
-  .Users
+  .User-Search
   {
-    width: 100%;
-    height: 7rem;
-    background: #0d7ce7;
-    box-sizing: border-box;
-    @include Two-Margin-Padding( 1rem , auto , true);
-    @include Two-Margin-Padding( .5rem , 0rem , false);
-    @include Flex(flex , row , center , center)
-  }
+    width: 90%;
+    height: 10rem;
+    margin: auto;
 
-  .Avatar
-  {
-    width: 25%;
-    height: 100%;
-    background: darkseagreen;
-    @include Flex(flex , row , center , flex-start);
 
-    img{
-      width: 65px;
-      height: 65px;
-      @include Two-Border-Radius(50px , 50px)
-    }
-  }
-
-  .Info
-  {
-    width: 75%;
-    height: 100%;
-    background: #bc03cb;
-    @include Flex(flex , column , center , center);
-
-    .TimeAndInfo
+    .Chats
     {
       width: 100%;
-      height: 50%;
-      background: #4eb1d0;
-      @include Flex(flex , row , space-around , center);
+      height: 5rem;
+      box-sizing: border-box;
+      @include Flex(flex , row , flex-start , center);
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+      color: $Font-Color-OF-HeaderName;
+      font: {
+        size: $Font-Size + 20;
+        weight: $Font-Weight;
+      };
+    }
 
 
-      .Name
+    .Input-Search
+    {
+      width: 100%;
+      height: 3.5rem;
+      background: #ebf1f7;
+      @include Two-Border-Radius(12px , 12px);
+      @include Flex();
+
+
+      img
       {
+        width: 25px;
+        height: 25px;
+        margin-right: 1rem;
+        opacity: 70%;
+      }
+
+      input
+      {
+        width: 80%;
+        height: 3rem;
+        font-size: $Font-Size + 2;
+        outline: none;
+        border: none;
+        background: transparent;
+      }
+    }
+
+  }
+
+
+
+
+  .Parent-Users
+  {
+    width: 90%;
+    margin: 1rem;
+    background: aliceblue;
+    margin: auto;
+
+    .Users
+    {
+      width: 100%;
+      height: 7rem;
+      background: #0d7ce7;
+      box-sizing: border-box;
+      @include Two-Margin-Padding( 1rem , auto , true);
+      @include Two-Margin-Padding( .5rem , 0rem , false);
+      @include Flex(flex , row , center , center)
+    }
+
+    .Avatar
+    {
+      width: 25%;
+      height: 100%;
+      background: darkseagreen;
+      @include Flex(flex , row , center , flex-start);
+
+      img{
+        width: 65px;
+        height: 65px;
+        @include Two-Border-Radius(50px , 50px)
+      }
+    }
+
+    .Info
+    {
+      width: 75%;
+      height: 100%;
+      background: #bc03cb;
+      @include Flex(flex , column , center , center);
+
+      .TimeAndInfo
+      {
+        width: 100%;
+        height: 50%;
+        background: #4eb1d0;
+        @include Flex(flex , row , space-around , center);
+
+
+        .Name
+        {
+
+        }
+
+        .Time
+        {
+
+        }
 
       }
 
-      .Time
+      .PrevMessage
       {
-
+        width: 100%;
+        height: 50%;
+        background: #d5da5c;
       }
 
     }
 
-    .PrevMessage
-    {
-      width: 100%;
-      height: 50%;
-      background: #d5da5c;
-    }
-
   }
 
+
 }
+
 
 
 

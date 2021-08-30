@@ -59,6 +59,7 @@ export default function MasterArea ()
             <ItemArea/>
             <UserArea/>
             {FakeMessage.Message &&  <ChatArea MessageLenght={FakeMessage} UpdateMessage={UpdateMessage} SendMessage={SendMessage}/>}
+
         </div>
     )
 }
