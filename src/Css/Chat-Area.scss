@@ -1,10 +1,14 @@
 
+
+
+
+
 .Chat-Area
 {
   width: 90%;
   height: 100%;
   @include Flex(flex , column , center , center);
-
+  transition: .5s;
 
 
   .Header-Chat
@@ -131,7 +135,9 @@
 
 
 
-
+  .Parent-Chats::-webkit-scrollbar {
+    display: none;
+  }
 
   .Parent-Chats
   {
@@ -140,6 +146,8 @@
     background: #ffffff;
     overflow-y: scroll;
     @include Flex(flex , column , flex-start , center);
+
+
 
 
     .Fake-Message-Block
@@ -153,6 +161,7 @@
     {
       width: 100%;
       @include Flex(flex , column , flex-start , flex-end);
+
 
       .Send-Message
       {
@@ -198,7 +207,7 @@
           size: $Font-Size;
           weight: $Font-Weight ;
         }
-        @include All-Margin-Padding( .5rem, 0, .5rem, 0, false)
+        @include All-Margin-Padding( .5rem, 0, .5rem, 0, false);
       }
 
       .Time
@@ -285,9 +294,8 @@
 
   .Footer-Input-Chat
   {
-    width: 66%;
-    height: 7rem;
-    position: fixed;
+    width: 98%;
+    position: sticky;
     bottom: 0;
     backdrop-filter: blur(3px) saturate(180%);
     -webkit-backdrop-filter: blur(3px) saturate(180%);
@@ -353,6 +361,15 @@
 
 
     }
+  }
+
+  /**For Margin Bottom For InputChat**/
+   .Footer-Input-Chat::after
+  {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2rem;
   }
 
 

@@ -1,0 +1,17 @@
+.Friend-Media
+{
+  width: 100%;
+  @include Flex(flex , column , center , center);
+  img
+  {
+    width: 140px;
+    height: 140px;
+  }
+  p
+  {
+    margin-top: .5rem;
+    font: {
+      size: $Font-Size + 2;
+    };
+  }
+}

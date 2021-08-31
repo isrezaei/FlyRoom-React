@@ -2,9 +2,9 @@ import React ,{useState , useEffect} from "react";
 import ChatArea from "../Chat-Area/Chat-Area";
 import ItemArea from "../Item-Area/Item-Area";
 import UserArea from "../User-Area/User-Area";
-
 import MessageFaker from "../Faker/Message-Faker";
-import {ne} from "faker/lib/locales";
+import ChatPanel from "../ChatPanel-Area/ChatPanel";
+
 
 
 
@@ -16,9 +16,12 @@ export default function MasterArea ()
             Message : MessageFaker(20)
         })
 
+    const [WidthPanel , SetWidthPanel] = useState()
 
 
     useEffect(()=>{
+
+
 
 
     } , [])
@@ -30,8 +33,6 @@ export default function MasterArea ()
     const UpdateMessage = () => {
         return SetFakeMessage( {Message: [...MessageFaker(20) , ...FakeMessage.Message]})
     }
-
-
     const SendMessage = (value) => {
 
         console.log(value)
@@ -45,20 +46,45 @@ export default function MasterArea ()
                         time : new Date().toLocaleTimeString()
                     }
                 ]
-
-
             })
+    }
+
+
+
+    const GetWidthSize = (Event) => {
+        return SetWidthPanel(Event.current)
+    }
+
+
+    const OpenPanel = () => {
+        console.log(WidthPanel)
+
+        return (
+            WidthPanel.style.width = '35%',
+            WidthPanel.style.display = 'block'
+
+        )
 
     }
 
 
 
 
+
     return (
+
+
         <div className='Master-Area'>
             <ItemArea/>
             <UserArea/>
-            {FakeMessage.Message &&  <ChatArea MessageLenght={FakeMessage} UpdateMessage={UpdateMessage} SendMessage={SendMessage}/>}
+            {FakeMessage.Message &&
+            <ChatArea
+                MessageLenght={FakeMessage}
+                UpdateMessage={UpdateMessage}
+                SendMessage={SendMessage}
+                OpenPanel={OpenPanel}
+            />}
+            <ChatPanel GetWidthSize={GetWidthSize}/>
 
         </div>
     )

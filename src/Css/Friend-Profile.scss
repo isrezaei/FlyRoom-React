@@ -1,0 +1,56 @@
+.Friend-Profile
+{
+
+  width: 100%;
+  margin: auto;
+  @include Flex(flex , column , center , center);
+  .Phone ,.Loaction ,.Email ,.Notifications
+  {
+    width: 90%;
+    height: 5rem;
+    @include Flex(flex , row , space-around , center);
+    border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
+
+    .Title-Panel
+    {
+      width: 50%;
+      box-sizing: border-box;
+      @include Flex(flex , column , space-between , flex-start);
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+
+      h1
+      {
+        font: {
+          size: $Font-Size + 3;
+          weight: $Font-Weight;
+        };
+      }
+
+      p
+      {
+        font: {
+          size: $Font-Size -1;
+          weight: $Font-Weight;
+        };
+        opacity: 50%;
+        margin-top: .5rem;
+      }
+    }
+
+    .Logo-Panel
+    {
+      @extend .Title-Panel;
+      @include Flex(flex , column , space-around , flex-end);
+      img
+      {
+        width: 30px;
+        height: 30px;
+        opacity: 50%;
+        transition: .3s;
+        cursor: pointer;
+      }
+    }
+    @import "Checke-Input";
+  }
+
+}

@@ -7,6 +7,7 @@ $Font-Family : 'Lato', sans-serif;
 $Font-Color-OF-HeaderName : rgba(0,0,0,0.9);
 $Font-Color-OF-TypeStatus : rgba(0,0,0,0.7);
 $Border-Bottom-Color-OF-Header : rgba(0,0,0,0.1);
+$Border-Left-Color-OF-Panel : rgba(0,0,0,0.1);
 
 @mixin All-Margin-Padding($top , $left , $bottom , $right , $margin:true){
   @if($margin){
@@ -43,6 +44,7 @@ $Border-Bottom-Color-OF-Header : rgba(0,0,0,0.1);
 
 body{
   font-family:$Font-Family;
+  overflow: hidden;
 }
 
 @import "Reset.css";
@@ -50,3 +52,4 @@ body{
 @import "Chat-Area";
 @import "Item-Area";
 @import "User-Area";
+@import "Chat-Panel";

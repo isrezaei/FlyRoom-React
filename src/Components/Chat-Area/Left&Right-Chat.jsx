@@ -1,6 +1,14 @@
 import React , {Component} from "react";
 import SendLogo from '../../Images/Icons/icons8-forward-arrow-100 .png'
 
+
+import { animations } from 'react-animation'
+
+const InterStyleChat = {
+    animation: animations.fadeIn
+}
+
+
 export default class LeftRightChat extends Component{
 
     constructor(props) {
@@ -26,8 +34,6 @@ export default class LeftRightChat extends Component{
         return null
     }
 
-
-
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(snapshot !== null)
         {
@@ -36,25 +42,21 @@ export default class LeftRightChat extends Component{
         }
     }
 
-
-    HandelChenge = (e) =>
-    {
+    HandelChenge = (e) => {
         this.setState({
             InputValue : e.target.value
         })
 
     }
 
-    SendInputSearchValue = () =>
-    {
+    SendInputSearchValue = () => {
         this.props.SendMessage(this.state.InputValue)
         this.setState({
             InputValue : ''
         })
     }
 
-    KeyBoard_SendInputSearchValue = (e) =>
-    {
+    KeyBoard_SendInputSearchValue = (e) => {
         if (e.key === 'Enter')
         {
             this.props.SendMessage(e.target.value)
@@ -71,8 +73,8 @@ export default class LeftRightChat extends Component{
 
         const FakeMessage = this.props.MessageLenght.Message.map((value , index)=>{
             return (
-                <div key={index} className={value.checked ? 'Body-Chat-Right' : 'Body-Chat-Left'}>
-                    <div className='Send-Message'>
+                <div style={InterStyleChat} key={index} className={value.checked ? 'Body-Chat-Right' : 'Body-Chat-Left'}>
+                    <div  className='Send-Message'>
 
                         <div className='Text-Area'>
 
@@ -101,7 +103,7 @@ export default class LeftRightChat extends Component{
         return (
             <>
 
-                <div className='Fake-Message-Block'>
+                <div style={InterStyleChat} className='Fake-Message-Block'>
                     {FakeMessage}
                 </div>
 

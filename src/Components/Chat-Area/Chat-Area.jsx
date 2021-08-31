@@ -1,7 +1,7 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
-export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght})
+export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel})
 {
 
 
@@ -32,7 +32,6 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght})
 
 
 
-
         return (
 
 
@@ -55,7 +54,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght})
 
                         <div className='Sender-Recive-Avatar-Info'>
 
-                            <div className='Click-To-Info'>
+                            <div onClick={OpenPanel} className='Click-To-Info'>
                                 <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
                             </div>
 
