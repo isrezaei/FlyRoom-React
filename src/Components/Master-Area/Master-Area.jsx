@@ -86,6 +86,8 @@ export default function MasterArea ()
             />}
             <ChatPanel GetWidthSize={GetWidthSize}/>
 
+
+
         </div>
     )
 }
