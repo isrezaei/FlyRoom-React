@@ -2,8 +2,7 @@ import React , {useEffect , useRef} from "react";
 import ShareLogo from '../../Images/Icons/icons8-clapperboard.gif'
 import FileLogo from  '../../Images/Icons/icons8-add-folder.gif'
 import { easings , animations } from 'react-animation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVolumeMute , faThumbtack , faUserLock } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
@@ -93,16 +92,13 @@ export default function ChatPanel({GetWidthSize})
 
                     <div className='DotsStyle'>
                         <p>Mute</p>
-                        <FontAwesomeIcon icon={faVolumeMute} className='Icons' />
 
                     </div>
                     <div className='DotsStyle'>
                         <p>Pin</p>
-                        <FontAwesomeIcon icon={faThumbtack} className='Icons' />
                     </div>
                     <div className='Block'>
                         <p>Block</p>
-                        <FontAwesomeIcon icon={faUserLock} className='Icons' />
                     </div>
 
                 </div>
