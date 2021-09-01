@@ -1,22 +1,24 @@
 import React , {useEffect , useRef} from "react";
-import ShareLogo from '../../Images/Icons/icons8-link.gif'
+import ShareLogo from '../../Images/Icons/icons8-clapperboard.gif'
 import FileLogo from  '../../Images/Icons/icons8-add-folder.gif'
-import { easings } from 'react-animation'
+import { easings , animations } from 'react-animation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVolumeMute , faThumbtack , faUserLock } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
 export default function ChatPanel({GetWidthSize})
 {
 
-
     const RefPanel = useRef()
     const FriendProfile = useRef()
     const FriendMedia = useRef()
     const FriendFile = useRef()
+    const FriendsDots = useRef()
     const Profile = useRef()
     const Media = useRef()
     const Files = useRef()
-
 
     useEffect(()=>{
 
@@ -25,8 +27,8 @@ export default function ChatPanel({GetWidthSize})
         FriendMedia.current.style.display = 'none'
         FriendFile.current.style.display = 'none'
 
-    } , [])
 
+    } , [])
 
     const ClosePanel = () => {
         return (
@@ -69,20 +71,46 @@ export default function ChatPanel({GetWidthSize})
         )
     }
 
+    const OpenDot = () => {
+        return FriendsDots.current.classList.toggle('Show-Dots')
+    }
 
     const stylePanelIcon = {
         animation: `pop-in ${easings.easeOutExpo} 500ms forwards`
+    }
+
+    const OpenDots = {
+        animation: animations.fadeIn
     }
 
 
     return (
         <div ref={RefPanel} className='Chat-Panel'>
 
-            {/*Header-Panel*/}
 
+
+                <div style={OpenDots} ref={FriendsDots} className='Friends-Dots'>
+
+                    <div className='DotsStyle'>
+                        <p>Mute</p>
+                        <FontAwesomeIcon icon={faVolumeMute} className='Icons' />
+
+                    </div>
+                    <div className='DotsStyle'>
+                        <p>Pin</p>
+                        <FontAwesomeIcon icon={faThumbtack} className='Icons' />
+                    </div>
+                    <div className='Block'>
+                        <p>Block</p>
+                        <FontAwesomeIcon icon={faUserLock} className='Icons' />
+                    </div>
+
+                </div>
+
+            {/*Header-Panel*/}
             <div style={stylePanelIcon}  className='Handel-Postion'>
                 <img onClick={ClosePanel} src="https://img.icons8.com/ios-filled/96/000000/more-than.png"/>
-                <img src="https://img.icons8.com/material-rounded/48/000000/menu-2.png"/>
+                <img onClick={OpenDot} src="https://img.icons8.com/material-rounded/48/000000/menu-2.png"/>
             </div>
 
             {/*Item-Panel*/}
