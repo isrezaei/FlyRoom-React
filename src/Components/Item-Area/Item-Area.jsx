@@ -20,7 +20,9 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <i className="fas fa-address-card "></i>
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <BsPencilSquare/>
+                        </IconContext.Provider>
                     </div>
 
                     <div className='People'>
