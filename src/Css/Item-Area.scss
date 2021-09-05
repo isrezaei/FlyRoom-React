@@ -34,10 +34,9 @@
       {
         @include Two-Margin-Padding( 2rem , 0 );
 
-        .Icone
+        .fa-address-card
         {
-          width: 25px;
-          height: 25px;
+          font-size: 25px;
           opacity: 60%;
         }
       }

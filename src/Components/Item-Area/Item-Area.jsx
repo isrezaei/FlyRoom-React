@@ -20,7 +20,7 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <i className="fas fa-address-card"></i>
+                        <i className="fas fa-address-card "></i>
                     </div>
 
                     <div className='People'>
