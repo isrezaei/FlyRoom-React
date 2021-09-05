@@ -60,7 +60,7 @@ export default function MasterArea ()
         console.log(WidthPanel)
 
         return (
-            WidthPanel.style.width = '35%',
+            WidthPanel.style.width = '30%',
             WidthPanel.style.display = 'block'
 
         )

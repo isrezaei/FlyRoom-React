@@ -1,8 +1,3 @@
-
-
-
-
-
 .Chat-Area
 {
   width: 90%;
@@ -17,7 +12,6 @@
     height: 5rem;
     border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
     @include Flex(flex , row , space-between , center);
-
 
 
     .Header-Avatar
@@ -36,8 +30,8 @@
 
         img
         {
-          width: 55px;
-          height: 55px;
+          width: 50px;
+          height: 50px;
           background: #e1b3b3;
           @include Two-Border-Radius(50px , 50px )
         }
@@ -51,7 +45,7 @@
 
       .Name{
         font: {
-          size: $Font-Size + 5;
+          size: $Font-Size + 3;
           weight: $Font-Weight;
         };
         color: $Font-Color-OF-HeaderName;
@@ -65,8 +59,6 @@
         };
         color: $Font-Color-OF-TypeStatus;
       }
-
-
 
     }
 
@@ -153,7 +145,7 @@
     .Fake-Message-Block
     {
       width: 100%;
-      margin-bottom: 9rem;
+      margin-bottom: 1.5rem;
     }
 
 
@@ -180,7 +172,7 @@
         {
           width: 50px;
           height: 50px;
-          background: darkseagreen;
+          background: #b7e18d;
           @include Two-Border-Radius(50px , 50px);
 
         }
@@ -204,7 +196,7 @@
         width: 100%;
         text-align: left;
         font : {
-          size: $Font-Size;
+          size: $Font-Size - 1;
           weight: $Font-Weight ;
         }
         @include All-Margin-Padding( .5rem, 0, .5rem, 0, false);
@@ -246,7 +238,7 @@
         {
           width: 50px;
           height: 50px;
-          background: darkseagreen;
+          background: #a8e0ec;
           @include Two-Border-Radius(50px , 50px);
 
         }
@@ -271,7 +263,7 @@
         width: 100%;
         text-align: left;
         font : {
-          size: $Font-Size;
+          size: $Font-Size - 1;
           weight: $Font-Weight ;
         }
         @include All-Margin-Padding( .5rem, 0, .5rem, 0, false)
@@ -304,7 +296,7 @@
     .Input-Button
     {
       width: 99%;
-      height: 5rem;
+      height: 4.5rem;
       margin: auto;
       background: #ebf1f7;
       @include Two-Border-Radius(50px , 50px);

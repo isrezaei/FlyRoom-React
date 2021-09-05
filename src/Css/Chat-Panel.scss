@@ -30,14 +30,14 @@
   {
     width: 90%;
     height: 20rem;
-    margin: 3.5rem auto;
+    @include All-Margin-Padding(3rem , auto , 0 , auto);
 
     @include Flex(flex , column , center , center);
 
     .Image-Profile
     {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       background: #70eed7;
       @include Two-Border-Radius(100px , 100px);
       z-index: 1;
@@ -47,7 +47,7 @@
     {
       margin-top: 1rem;
       font: {
-        size: $Font-Size + 7;
+        size: $Font-Size + 4;
         weight: $Font-Weight ;
       };
     }
@@ -55,7 +55,7 @@
     .Item-Profile
     {
       width: 100%;
-      height: 4.5rem;
+      height: 4rem;
       margin-top: 2rem;
       background:#ebf1f7;
       box-sizing: border-box;
@@ -65,12 +65,12 @@
 
       p
       {
-        width: 8rem;
+        width: 7rem;
         text-align: center;
         cursor: pointer;
 
         font: {
-          size: $Font-Size + 3;
+          size: $Font-Size + 1;
           weight: $Font-Weight;
         };
         color: rgba(0,0,0,0.5);
@@ -78,8 +78,8 @@
 
       .Active
       {
-        width: 8rem;
-        height: 3.5rem;
+        width: 7rem;
+        height: 3rem;
         background: white;
         color: black;
         cursor: pointer;

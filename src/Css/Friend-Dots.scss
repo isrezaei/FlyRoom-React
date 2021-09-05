@@ -3,17 +3,17 @@
 
   position: absolute;
   top: 5.5%;
-  right: 2%;
-  width: 10rem;
-  height: 10rem;
+  right: 2.5%;
+  width: 9rem;
+  height: 8rem;
   background: #f5f5f5;
   z-index: 1;
   @include Two-Border-Radius(5px , 5px);
   @include Two-Margin-Padding(.5rem , .5rem , false);
   @include Flex(flex , column , space-between , center);
   display: none;
-  -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.08);
-  box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 
 
 
@@ -32,7 +32,7 @@
     p
     {
       font: {
-        size: $Font-Size + 2;
+        size: $Font-Size + 1;
         weight: $Font-Weight;
       };
       color: $Font-Low_opacity;

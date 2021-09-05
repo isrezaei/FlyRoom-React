@@ -21,7 +21,7 @@
       h1
       {
         font: {
-          size: $Font-Size + 3;
+          size: $Font-Size ;
           weight: $Font-Weight;
         };
       }
@@ -29,7 +29,7 @@
       p
       {
         font: {
-          size: $Font-Size -1;
+          size: $Font-Size - 2;
           weight: $Font-Weight;
         };
         opacity: 50%;
@@ -43,8 +43,8 @@
       @include Flex(flex , column , space-around , flex-end);
       img
       {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         opacity: 50%;
         transition: .3s;
         cursor: pointer;
