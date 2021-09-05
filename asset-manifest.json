@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/FlyRoom-React/static/css/main.f86923d9.chunk.css",
-    "main.js": "/FlyRoom-React/static/js/main.d11261ab.chunk.js",
-    "main.js.map": "/FlyRoom-React/static/js/main.d11261ab.chunk.js.map",
+    "main.css": "/FlyRoom-React/static/css/main.2f520554.chunk.css",
+    "main.js": "/FlyRoom-React/static/js/main.e32f5bb6.chunk.js",
+    "main.js.map": "/FlyRoom-React/static/js/main.e32f5bb6.chunk.js.map",
     "runtime-main.js": "/FlyRoom-React/static/js/runtime-main.3272293a.js",
     "runtime-main.js.map": "/FlyRoom-React/static/js/runtime-main.3272293a.js.map",
     "static/js/2.b6081c3d.chunk.js": "/FlyRoom-React/static/js/2.b6081c3d.chunk.js",
     "static/js/2.b6081c3d.chunk.js.map": "/FlyRoom-React/static/js/2.b6081c3d.chunk.js.map",
     "index.html": "/FlyRoom-React/index.html",
-    "static/css/main.f86923d9.chunk.css.map": "/FlyRoom-React/static/css/main.f86923d9.chunk.css.map",
+    "static/css/main.2f520554.chunk.css.map": "/FlyRoom-React/static/css/main.2f520554.chunk.css.map",
     "static/js/2.b6081c3d.chunk.js.LICENSE.txt": "/FlyRoom-React/static/js/2.b6081c3d.chunk.js.LICENSE.txt",
     "static/media/icons8-add-folder.bd5c9d42.gif": "/FlyRoom-React/static/media/icons8-add-folder.bd5c9d42.gif",
     "static/media/icons8-clapperboard.ff6d899f.gif": "/FlyRoom-React/static/media/icons8-clapperboard.ff6d899f.gif"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.3272293a.js",
     "static/js/2.b6081c3d.chunk.js",
-    "static/css/main.f86923d9.chunk.css",
-    "static/js/main.d11261ab.chunk.js"
+    "static/css/main.2f520554.chunk.css",
+    "static/js/main.e32f5bb6.chunk.js"
   ]
 }
