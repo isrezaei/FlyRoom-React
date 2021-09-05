@@ -112,12 +112,11 @@
       width: 20%;
       height: 4rem;
       cursor: pointer;
-
-
       img
       {
         width: 20px;
         height: 20px;
+        opacity: 70%;
       }
 
     }
@@ -304,12 +303,14 @@
 
       .Attach-File
       {
-        img
+        .Icone
         {
           width: 25px;
           height: 25px;
           opacity: 60%;
           cursor: pointer;
+          margin-left: 1rem;
+          opacity: 40%;
         }
       }
 
@@ -325,12 +326,13 @@
 
       .Emoji
       {
-        img
+        .Icone
         {
           width: 25px;
           height: 25px;
           opacity: 60%;
           cursor: pointer;
+          opacity: 40%;
         }
       }
 
@@ -342,6 +344,7 @@
         border: none;
         background: #5959ff;
         cursor: pointer;
+        margin-right: 1rem;
         @include Two-Border-Radius(50px , 50px);
 
         img

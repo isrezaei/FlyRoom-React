@@ -1,8 +1,8 @@
 import React , {Component} from "react";
 import SendLogo from '../../Images/Icons/icons8-forward-arrow-100 .png'
-
-
 import { animations } from 'react-animation'
+import {HiOutlineDocumentAdd} from 'react-icons/hi'
+import {HiOutlineEmojiHappy} from 'react-icons/hi'
 
 const InterStyleChat = {
     animation: animations.fadeIn
@@ -112,7 +112,7 @@ export default class LeftRightChat extends Component{
                     <div className='Input-Button'>
 
                         <div className='Attach-File'>
-                            <img src="https://img.icons8.com/small/32/000000/add-file.png"/>
+                           <HiOutlineDocumentAdd className={'Icone'}/>
                         </div>
 
                         <input onKeyPress={this.KeyBoard_SendInputSearchValue}
@@ -122,7 +122,7 @@ export default class LeftRightChat extends Component{
                                className='Input-Search'/>
 
                         <div className='Emoji'>
-                            <img src="https://img.icons8.com/ios/96/000000/anime-emoji--v1.png"/>
+                            <HiOutlineEmojiHappy className={'Icone'}/>
                         </div>
 
                         <button className='Search-Button' onClick={this.SendInputSearchValue}>

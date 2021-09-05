@@ -14,7 +14,7 @@
     margin: auto;
     @include Flex(flex , row ,space-between , center);
 
-    img
+    .Icone
     {
       width: 25px;
       height: 25px;

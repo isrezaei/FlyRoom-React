@@ -41,7 +41,7 @@
     {
       @extend .Title-Panel;
       @include Flex(flex , column , space-around , flex-end);
-      img
+      .Icone
       {
         width: 25px;
         height: 25px;

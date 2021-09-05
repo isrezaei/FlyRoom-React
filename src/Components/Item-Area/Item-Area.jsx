@@ -1,5 +1,9 @@
 import React from "react";
 import { BsPencilSquare } from 'react-icons/bs';
+import {FiUsers} from 'react-icons/fi'
+import {BiMessageSquareDetail} from 'react-icons/bi'
+import {RiNotification3Line} from 'react-icons/ri'
+import {RiSettingsLine} from 'react-icons/ri'
 
 export default function ItemArea()
 {
@@ -14,20 +18,20 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <BsPencilSquare/>
+                        <BsPencilSquare className={'Icone'}/>
                     </div>
                     <div className='People'>
-                        <img src="https://img.icons8.com/ios/50/000000/user-group-man-man.png"/>
+                       <FiUsers className={'Icone'}/>
                     </div>
                     <div className='Message'>
-                        <img src="https://img.icons8.com/ios/100/000000/message-group.png"/>
+                       <BiMessageSquareDetail  className={'Icone'}/>
                     </div>
                     <div className='Alert'>
-                        <img src="https://img.icons8.com/ios/50/000000/alarm.png"/>
+                        <RiNotification3Line className={'Icone'}/>
                     </div>
 
                     <div className='Setting'>
-                        <img src="https://img.icons8.com/ios/100/000000/settings.png"/>
+                        <RiSettingsLine  className={'Icone'}/>
                     </div>
 
                 </div>

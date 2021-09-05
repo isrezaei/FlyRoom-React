@@ -2,14 +2,20 @@ import React , {useEffect , useRef} from "react";
 import ShareLogo from '../../Images/Icons/icons8-clapperboard.gif'
 import FileLogo from  '../../Images/Icons/icons8-add-folder.gif'
 import { easings , animations } from 'react-animation'
-
+import {BiVolumeMute} from 'react-icons/bi'
+import {TiPinOutline} from 'react-icons/ti'
+import {CgBlock} from 'react-icons/cg'
+import {HiOutlinePhone} from 'react-icons/hi'
+import {HiOutlineLocationMarker} from 'react-icons/hi'
+import {HiOutlineMail} from 'react-icons/hi'
+import {MdKeyboardArrowRight} from 'react-icons/md'
+import {HiOutlineDotsVertical} from 'react-icons/hi'
 
 
 
 
 export default function ChatPanel({GetWidthSize})
 {
-
     const RefPanel = useRef()
     const FriendProfile = useRef()
     const FriendMedia = useRef()
@@ -86,27 +92,29 @@ export default function ChatPanel({GetWidthSize})
     return (
         <div ref={RefPanel} className='Chat-Panel'>
 
-
-
                 <div style={OpenDots} ref={FriendsDots} className='Friends-Dots'>
 
                     <div className='DotsStyle'>
                         <p>Mute</p>
+                        <BiVolumeMute className={'Icons'}/>
 
                     </div>
                     <div className='DotsStyle'>
                         <p>Pin</p>
+                        <TiPinOutline className={'Icons'}/>
                     </div>
                     <div className='Block'>
                         <p>Block</p>
+                        <CgBlock className={'Icons'}/>
                     </div>
 
                 </div>
 
             {/*Header-Panel*/}
             <div style={stylePanelIcon}  className='Handel-Postion'>
-                <img onClick={ClosePanel} src="https://img.icons8.com/ios-filled/96/000000/more-than.png"/>
-                <img onClick={OpenDot} src="https://img.icons8.com/material-rounded/48/000000/menu-2.png"/>
+
+                <MdKeyboardArrowRight onClick={ClosePanel} className={'Icone'}/>
+                <HiOutlineDotsVertical onClick={OpenDot} className={'Icone'} />
             </div>
 
             {/*Item-Panel*/}
@@ -130,7 +138,7 @@ export default function ChatPanel({GetWidthSize})
                         <p>1-800-275-2273</p>
                     </div>
                     <div className='Logo-Panel'>
-                        <img src="https://img.icons8.com/material-outlined/48/000000/outgoing-call.png"/>
+                        <HiOutlinePhone className={'Icone'}/>
                     </div>
                 </div>
 
@@ -140,7 +148,7 @@ export default function ChatPanel({GetWidthSize})
                         <p>USA, Houston</p>
                     </div>
                     <div className='Logo-Panel'>
-                        <img src="https://img.icons8.com/pastel-glyph/64/000000/worldwide-location--v1.png"/>
+                       <HiOutlineLocationMarker className={'Icone'}/>
                     </div>
                 </div>
 
@@ -150,7 +158,7 @@ export default function ChatPanel({GetWidthSize})
                         <p>chandler@ollie.com</p>
                     </div>
                     <div className='Logo-Panel'>
-                        <img src="https://img.icons8.com/ios-glyphs/90/000000/email.png"/>
+                        <HiOutlineMail className={'Icone'}/>
                     </div>
                 </div>
 

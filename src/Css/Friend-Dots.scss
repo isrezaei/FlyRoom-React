@@ -1,19 +1,17 @@
 .Friends-Dots
 {
-
   position: absolute;
   top: 5.5%;
-  right: 2.5%;
-  width: 9rem;
+  right: 2%;
+  width: 7rem;
   height: 8rem;
-  background: #f5f5f5;
+  background: #f6f9fb;
   z-index: 1;
-  @include Two-Border-Radius(5px , 5px);
+  @include Two-Border-Radius(6px , 6px);
   @include Two-Margin-Padding(.5rem , .5rem , false);
   @include Flex(flex , column , space-between , center);
   display: none;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
 
 
 
@@ -32,7 +30,7 @@
     p
     {
       font: {
-        size: $Font-Size + 1;
+        size: $Font-Size;
         weight: $Font-Weight;
       };
       color: $Font-Low_opacity;
@@ -40,9 +38,9 @@
 
     .Icons
     {
-      width:  25px;
-      height: 25px;
-      opacity: 50%;
+      width:  23px;
+      height: 23px;
+      opacity: 40%;
     }
   }
 
