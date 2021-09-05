@@ -1,9 +1,11 @@
 import React from "react";
+import { IconContext } from "react-icons" ;
 import { BsPencilSquare } from 'react-icons/bs';
 import {FiUsers} from 'react-icons/fi'
 import {BiMessageSquareDetail} from 'react-icons/bi'
 import {RiNotification3Line} from 'react-icons/ri'
 import {RiSettingsLine} from 'react-icons/ri'
+import Write from '../../Images/Icons/pencil-938.svg'
 
 export default function ItemArea()
 {
@@ -18,20 +20,37 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <BsPencilSquare/>
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <BsPencilSquare/>
+                        </IconContext.Provider>
+
                     </div>
+
                     <div className='People'>
-                       <FiUsers/>
+
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <FiUsers/>
+                        </IconContext.Provider>
+
+
                     </div>
+
                     <div className='Message'>
-                       <BiMessageSquareDetail />
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <BiMessageSquareDetail/>
+                        </IconContext.Provider>
                     </div>
+
                     <div className='Alert'>
-                        <RiNotification3Line/>
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <RiNotification3Line/>
+                        </IconContext.Provider>
                     </div>
 
                     <div className='Setting'>
-                        <RiSettingsLine />
+                        <IconContext.Provider value={{className : 'Icone'}}>
+                            <RiSettingsLine/>
+                        </IconContext.Provider>
                     </div>
 
                 </div>

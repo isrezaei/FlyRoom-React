@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350" height="350" viewBox="0 0 350 350" xml:space="preserve">
+<desc>Created with Fabric.js 1.7.22</desc>
+<defs>
+</defs>
+<g id="icon" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)" >
+	<path d="M 85.155 89.979 c -0.425 0 -0.855 -0.056 -1.282 -0.17 l -19.906 -5.334 c -0.373 -0.1 -0.731 -0.243 -1.067 -0.426 l -0.143 0.137 l -2.656 -2.608 l 21.456 -21.457 l 1.45 1.45 c 0.73 0.639 1.244 1.459 1.489 2.377 l 5.334 19.905 c 0.455 1.699 -0.015 3.454 -1.258 4.698 C 87.641 89.482 86.422 89.979 85.155 89.979 z M 64.392 81.483 c 0.108 0.052 0.222 0.095 0.343 0.127 l 19.907 5.334 c 0.954 0.259 1.598 -0.258 1.831 -0.491 c 0.233 -0.233 0.747 -0.877 0.491 -1.831 L 81.63 64.716 c -0.032 -0.12 -0.074 -0.234 -0.129 -0.342 L 64.392 81.483 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+	<path d="M 55.935 77.412 L 3.789 25.266 c -5.052 -5.051 -5.052 -13.271 0 -18.322 l 3.134 -3.134 c 5.052 -5.052 13.272 -5.052 18.322 0 l 52.146 52.146 L 55.935 77.412 z M 16.084 2.986 c -2.558 0 -5.116 0.973 -7.064 2.921 L 5.886 9.041 c -3.895 3.895 -3.895 10.232 0 14.127 l 50.049 50.049 l 17.261 -17.262 L 23.148 5.907 C 21.2 3.96 18.642 2.986 16.084 2.986 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+</g>
+</svg>
