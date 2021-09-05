@@ -18,20 +18,20 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <BsPencilSquare className={'Icone'}/>
+                        <BsPencilSquare/>
                     </div>
                     <div className='People'>
-                       <FiUsers className={'Icone'}/>
+                       <FiUsers/>
                     </div>
                     <div className='Message'>
-                       <BiMessageSquareDetail  className={'Icone'}/>
+                       <BiMessageSquareDetail />
                     </div>
                     <div className='Alert'>
-                        <RiNotification3Line className={'Icone'}/>
+                        <RiNotification3Line/>
                     </div>
 
                     <div className='Setting'>
-                        <RiSettingsLine  className={'Icone'}/>
+                        <RiSettingsLine />
                     </div>
 
                 </div>
