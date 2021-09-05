@@ -1,4 +1,5 @@
 import React from "react";
+import { BsPencilSquare } from 'react-icons/bs';
 
 export default function ItemArea()
 {
@@ -13,7 +14,7 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <img src="https://img.icons8.com/ios/100/000000/hand-with-pen.png"/>
+                        <BsPencilSquare/>
                     </div>
                     <div className='People'>
                         <img src="https://img.icons8.com/ios/50/000000/user-group-man-man.png"/>
