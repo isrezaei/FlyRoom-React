@@ -20,33 +20,33 @@ export default function ItemArea()
 
                 <div className='Item'>
                     <div className='Write'>
-                        <IconContext.Provider value={{className : 'Icone'}}>
-                            <BsPencilSquare/>
-                        </IconContext.Provider>
+
+                            <BsPencilSquare className={'Icone'}/>
+
                     </div>
 
                     <div className='People'>
-                        <IconContext.Provider value={{className : 'Icone'}}>
-                            <FiUsers/>
-                        </IconContext.Provider>
+
+                            <FiUsers className={'Icone'}/>
+
                     </div>
 
                     <div className='Message'>
-                        <IconContext.Provider value={{className : 'Icone'}}>
-                            <BiMessageSquareDetail/>
-                        </IconContext.Provider>
+
+                            <BiMessageSquareDetail className={'Icone'}/>
+
                     </div>
 
                     <div className='Alert'>
-                        <IconContext.Provider value={{className : 'Icone'}}>
-                            <RiNotification3Line/>
-                        </IconContext.Provider>
+
+                            <RiNotification3Line className={'Icone'}/>
+
                     </div>
 
                     <div className='Setting'>
-                        <IconContext.Provider value={{className : 'Icone'}}>
-                            <RiSettingsLine/>
-                        </IconContext.Provider>
+
+                            <RiSettingsLine className={'Icone'}/>
+
                     </div>
 
                 </div>

@@ -44,14 +44,14 @@
       .Icone
       {
         font-size: 25px;
-        color: rgba(0,0,0,0.5);
+        color: rgba(0,0,0,0.4);
         transition: .5s;
         cursor: pointer;
       }
 
       .Icone:hover
       {
-        color: rgba(0,0,0,0.7);
+        color: rgba(0,0,0,0.6);
       }
     }
     @import "Checke-Input";
