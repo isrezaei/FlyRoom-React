@@ -43,11 +43,15 @@
       @include Flex(flex , column , space-around , flex-end);
       .Icone
       {
-        width: 25px;
-        height: 25px;
-        opacity: 50%;
-        transition: .3s;
+        font-size: 25px;
+        color: rgba(0,0,0,0.5);
+        transition: .5s;
         cursor: pointer;
+      }
+
+      .Icone:hover
+      {
+        color: rgba(0,0,0,0.7);
       }
     }
     @import "Checke-Input";
