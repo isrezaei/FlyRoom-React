@@ -67,9 +67,6 @@
 
   }
 
-
-
-
   .Parent-Users
   {
     width: 95%;
@@ -120,28 +117,24 @@
 
 
 
-          .Name-LastName
-          {
-            font: {
-              size: $Font-Size + 2;
-              weight: $Font-Weight;
-            };
-          }
+        .Name-LastName
+        {
+          font: {
+            size: $Font-Size + 2;
+            weight: $Font-Weight;
+          };
+        }
 
-          .Time
-          {
+        .Time
+        {
 
-            color: rgba(0,0,0,0.4);
-            font: {
-              size: $Font-Size - 3;
-              weight: $Font-Weight;
-            };
+          color: rgba(0,0,0,0.4);
+          font: {
+            size: $Font-Size - 3;
+            weight: $Font-Weight;
+          };
 
-          }
-
-
-
-
+        }
 
       }
 
@@ -166,5 +159,42 @@
 }
 
 
+.DarkMood-User-Area {
+  background: #383534;
+  .Chats
+  {
+    color: #c4c4c4 !important;
+  }
+
+  .Input-Search
+  {
+    background: #2B2B2B !important;
+    img
+    {
+      filter: invert(0.70);
+    }
+  }
+
+  .Users
+  {
+    background: #2B2B2B !important;
+  }
+
+  .Name-LastName
+  {
+    color: #c4c4c4;
+  }
+
+  .Time
+  {
+    color: #c4c4c4!important;
+  }
+
+  .PrevMessage
+  {
+  color: #c4c4c4;
+  }
+
+}
 
 

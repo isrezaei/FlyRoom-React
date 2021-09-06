@@ -1,11 +1,12 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
-export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel})
+export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , ChatArena})
 {
 
 
     let RefBodyChat = useRef()
+    let RefChatArea = useRef()
 
     const [RefBodyMessage , SetRefBodyMessage] = useState()
 
@@ -15,6 +16,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
 
         SetRefBodyMessage(RefBodyChat)
 
+        ChatArena(RefChatArea)
 
 
     } , [MessageLenght])
@@ -36,7 +38,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
 
 
 
-            <div className='Chat-Area'>
+            <div ref={RefChatArea} className='Chat-Area'>
 
 
                 <div className='Header-Chat'>

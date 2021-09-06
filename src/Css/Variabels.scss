@@ -4,10 +4,10 @@
 $Font-Size : 16px;
 $Font-Weight : 700;
 $Font-Family : 'Lato', sans-serif;
-$Font-Color-OF-HeaderName : rgba(0,0,0,0.9);
+$Font-Color-OF-HeaderName : rgba(38, 38, 38, 0.9);
 $Font-Color-OF-TypeStatus : rgba(0,0,0,0.7);
 $Font-Low_opacity :  rgba(0,0,0,0.6);
-$Border-Bottom-Color-OF-Header : rgba(0,0,0,0.1);
+$Border-Bottom-Color-OF-Header : rgba(91, 91, 91, 0.1);
 $Border-Left-Color-OF-Panel : rgba(0,0,0,0.1);
 
 @mixin All-Margin-Padding($top , $left , $bottom , $right , $margin:true){
@@ -54,3 +54,4 @@ body{
 @import "Item-Area";
 @import "User-Area";
 @import "Chat-Panel";
+@import "Setting-Panel";

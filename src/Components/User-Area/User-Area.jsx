@@ -1,16 +1,26 @@
-import React , {useState , useEffect} from "react";
+import React , {useState , useEffect , useRef} from "react";
 import FakerData from "../Faker/Faker-Data";
 import UserInfo from "./User-Info";
 
-export default function UserArea({Avatar})
+export default function UserArea({Avatar , Dark_UserArea})
 {
+
+    const UserArea = useRef()
+
+
+    useEffect(()=>{
+
+        Dark_UserArea(UserArea)
+
+
+    } , [])
 
    const User = FakerData().map( (value , index)=> {
         return <UserInfo key={index} Value={value} Avatar={Avatar}/>
     })
 
     return (
-        <div className='User-Area'>
+        <div ref={UserArea} className='User-Area'>
 
             <div className='User-Search'>
 

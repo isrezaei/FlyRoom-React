@@ -1,5 +1,4 @@
-import React from "react";
-import { IconContext } from "react-icons" ;
+import React, {useEffect , useRef} from "react";
 import { BsPencilSquare } from 'react-icons/bs';
 import {FiUsers} from 'react-icons/fi'
 import {BiMessageSquareDetail} from 'react-icons/bi'
@@ -7,10 +6,21 @@ import {RiNotification3Line} from 'react-icons/ri'
 import {RiSettingsLine} from 'react-icons/ri'
 import Write from '../../Images/Icons/pencil-938.svg'
 
-export default function ItemArea()
+export default function ItemArea({Dark_ItemArea , OpenSettingPanel})
 {
+
+    const ItemArea = useRef()
+
+    useEffect(()=>{
+
+        Dark_ItemArea(ItemArea)
+
+
+    } , [])
+
+
     return (
-        <div className='Item-Area'>
+        <div ref={ItemArea} className='Item-Area'>
 
             <div className='ParentIcon'>
 
@@ -19,34 +29,25 @@ export default function ItemArea()
                 </div>
 
                 <div className='Item'>
+
                     <div className='Write'>
-
                             <BsPencilSquare className={'Icone'}/>
-
                     </div>
 
                     <div className='People'>
-
                             <FiUsers className={'Icone'}/>
-
                     </div>
 
                     <div className='Message'>
-
                             <BiMessageSquareDetail className={'Icone'}/>
-
                     </div>
 
                     <div className='Alert'>
-
                             <RiNotification3Line className={'Icone'}/>
-
                     </div>
 
-                    <div className='Setting'>
-
+                    <div onClick={OpenSettingPanel} className='Setting'>
                             <RiSettingsLine className={'Icone'}/>
-
                     </div>
 
                 </div>

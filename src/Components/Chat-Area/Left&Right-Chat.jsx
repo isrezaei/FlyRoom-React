@@ -109,7 +109,7 @@ export default class LeftRightChat extends Component{
 
                 <div className='Footer-Input-Chat'>
 
-                    <div className='Input-Button'>
+                    <div className='Input-TypeChat'>
 
                         <div className='Attach-File'>
                            <HiOutlineDocumentAdd className={'Icone'}/>

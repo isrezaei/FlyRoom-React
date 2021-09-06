@@ -1,0 +1,136 @@
+.Setting-Panel
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  backdrop-filter: blur(17px) saturate(200%);
+  -webkit-backdrop-filter: blur(17px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.5);
+  @include Flex(flex , column , flex-start , center);
+  display: none;
+  transition: .3s;
+
+  .Appearance
+  {
+    margin-top: 2rem;
+    font: {
+      size: $Font-Size + 30;
+      weight: $Font-Weight;
+    };
+  }
+
+  .Dark-Mood
+  {
+    width: 80%;
+    height: 5rem;
+    margin-top: 5rem;
+    @include Flex(flex , column , space-around , center);
+
+    P
+    {
+      font: {
+        size: $Font-Size + 6;
+        weight: $Font-Weight;
+      };
+    }
+
+  }
+
+  .Color-Theme
+  {
+    width: 80%;
+    height: auto;
+    @include Flex(flex , row , center , center);
+
+
+
+    .Themes
+    {
+      width: 50%;
+      font-size: $Font-Size + 1;
+      @include Flex(flex , column , center , center);
+      p
+      {
+        font: {
+          size: $Font-Size + 3;
+          weight: $Font-Weight;
+        };
+        @include Two-Margin-Padding(.5rem , 0)
+      }
+    }
+
+    .Handel-Palette
+    {
+      @include Flex(flex , column , center , center);
+      width: 50%;
+
+
+      .Palette
+      {
+        width: 100%;
+        height: auto;
+
+        @include Flex();
+
+        .Cercel
+        {
+          width: 30px;
+          height: 30px;
+          background: #92f197;
+          @include Two-Border-Radius(100px , 100px);
+          @include Two-Margin-Padding(.3rem , .2rem)
+        }
+
+        .N1
+        {
+          background: #FF7600;
+        }
+
+        .N2
+        {
+          background: #FFA900;
+        }
+
+        .N3
+        {
+          background: #9FE6A0;
+        }
+
+        .N4
+        {
+          background: #4AA96C;
+        }
+
+        .N5
+        {
+          background: #64C9CF;
+        }
+
+        .N6
+        {
+          background: #C2FFD9;
+        }
+
+        .N7
+        {
+          background: #FFDF6B;
+        }
+
+        .N8
+        {
+          background: #FF79CD;
+        }
+
+      }
+
+    }
+
+
+
+
+
+  }
+
+}
+
