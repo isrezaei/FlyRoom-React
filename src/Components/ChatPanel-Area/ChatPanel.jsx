@@ -14,9 +14,9 @@ import {HiOutlineDotsVertical} from 'react-icons/hi'
 
 
 
-export default function ChatPanel({GetWidthSize})
+export default function ChatPanel({GetWidthSize , Dark_ChatPanel})
 {
-    const RefPanel = useRef()
+    const Panel = useRef()
     const FriendProfile = useRef()
     const FriendMedia = useRef()
     const FriendFile = useRef()
@@ -28,17 +28,18 @@ export default function ChatPanel({GetWidthSize})
     useEffect(()=>{
 
 
-        GetWidthSize(RefPanel)
+        GetWidthSize(Panel)
         FriendMedia.current.style.display = 'none'
         FriendFile.current.style.display = 'none'
+        Dark_ChatPanel(Panel)
 
 
     } , [])
 
     const ClosePanel = () => {
         return (
-            RefPanel.current.style.width = '0',
-                RefPanel.current.style.display = 'none'
+            Panel.current.style.width = '0',
+                Panel.current.style.display = 'none'
         )
     }
 
@@ -90,7 +91,7 @@ export default function ChatPanel({GetWidthSize})
 
 
     return (
-        <div ref={RefPanel} className='Chat-Panel'>
+        <div ref={Panel} className='Chat-Panel'>
 
                 <div style={OpenDots} ref={FriendsDots} className='Friends-Dots'>
 

@@ -6,10 +6,6 @@ import MessageFaker from "../Faker/Message-Faker";
 import ChatPanel from "../ChatPanel-Area/ChatPanel";
 import SettingPanel from "../Setting-Panel/Setting-Panel";
 
-
-
-
-
 export default function MasterArea ()
 {
 
@@ -24,11 +20,7 @@ export default function MasterArea ()
     const [State_ItemArea , Dark_SetItemArea] =  useState()
     const [State_UserArea , Dark_SetUserArea] = useState()
     const [State_ChatArea , Dark_SetChatArea] = useState()
-
-
-
-
-
+    const [State_ChatPanel , Dark_SetChatPanel] = useState()
 
 
     const UpdateMessage = () => {
@@ -87,8 +79,12 @@ export default function MasterArea ()
         Dark_SetUserArea(Data)
     }
 
-    const ChatArena = (Data) => {
+    const Dark_ChatArea = (Data) => {
       Dark_SetChatArea(Data)
+    }
+
+    const Dark_ChatPanel = (Data) => {
+      Dark_SetChatPanel(Data)
     }
 
 
@@ -96,6 +92,7 @@ export default function MasterArea ()
         State_ItemArea.current.classList.toggle('DarkMood-Item-Area')
         State_UserArea.current.classList.toggle('DarkMood-User-Area')
         State_ChatArea.current.classList.toggle('DarkMood-Chat-Area')
+        State_ChatPanel.current.classList.toggle('DarkMood-Chat-Panel')
     }
 
     console.log(State_ItemArea)
@@ -115,10 +112,10 @@ export default function MasterArea ()
                 UpdateMessage={UpdateMessage}
                 SendMessage={SendMessage}
                 OpenPanel={OpenPanel}
-                ChatArena={ChatArena}
+                Dark_ChatArea={Dark_ChatArea}
             />}
 
-            <ChatPanel GetWidthSize={GetWidthSize}/>
+            <ChatPanel GetWidthSize={GetWidthSize} Dark_ChatPanel={Dark_ChatPanel}/>
 
             <SettingPanel SettingPanelData={SettingPanelData} SetDarkMood={SetDarkMood}/>
 

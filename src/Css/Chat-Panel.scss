@@ -4,7 +4,7 @@
   width: 0;
   height: 100%;
   border-left: 1px solid $Border-Left-Color-OF-Panel ;
-
+  background: white;
 
 
   .Handel-Postion
@@ -102,4 +102,43 @@
 
 
 
+}
+
+
+.DarkMood-Chat-Panel
+{
+  background: #2b2b2b;
+  border-left: 1px solid #494949;
+
+ .Icone
+  {
+    font-size: 25px;
+    color: rgba(241, 241, 241, 0.6) !important;
+    cursor: pointer;
+  }
+
+  h1
+  {
+    color: #f6f6f6;
+  }
+
+  p
+  {
+    color: white;
+  }
+
+  .Item-Profile
+  {
+    background: #3b3b3b !important;
+    p
+    {
+       color: #a2a2a2 !important;
+    }
+  }
+
+  .Active
+  {
+    background: #2b2b2b!important;
+      color: white!important;
+  }
 }

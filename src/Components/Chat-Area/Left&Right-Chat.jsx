@@ -119,7 +119,7 @@ export default class LeftRightChat extends Component{
                                onChange={this.HandelChenge}
                                value={this.state.InputValue}
                                placeholder='Type your message...'
-                               className='Input-Search'/>
+                               className='Input-Type'/>
 
                         <div className='Emoji'>
                             <HiOutlineEmojiHappy className={'Icone'}/>

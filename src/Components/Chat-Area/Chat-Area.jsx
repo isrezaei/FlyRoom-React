@@ -1,7 +1,7 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
-export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , ChatArena})
+export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , Dark_ChatArea})
 {
 
 
@@ -16,7 +16,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
 
         SetRefBodyMessage(RefBodyChat)
 
-        ChatArena(RefChatArea)
+        Dark_ChatArea(RefChatArea)
 
 
     } , [MessageLenght])
