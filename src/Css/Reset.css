@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 
-body
+html
 {
     overflow-y: scroll !important;
     overflow-x: hidden !important;
