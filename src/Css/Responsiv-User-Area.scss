@@ -1,0 +1,140 @@
+@media screen and (min-width: 0px) and (max-width: 320px)
+{
+
+
+  .User-Area {
+    width: 100%;
+    height: 100%;
+    background: #f6f9fb;
+    overflow: {
+      x: hidden;
+      y: scroll;
+    };
+
+
+    .User-Search {
+      width: 90%;
+      height: 5rem;
+      margin: auto;
+
+
+      .Chats {
+        width: 100%;
+        height: 3rem;
+        box-sizing: border-box;
+        @include Flex(flex, row, flex-start, center);
+        @include Two-Margin-Padding(.5rem, .5rem, false);
+        color: $Font-Color-OF-HeaderName;
+        font: {
+          size: $Font-Size + 2;
+          weight: $Font-Weight;
+        };
+      }
+
+
+      .Input-Search {
+        width: 100%;
+        height: 2rem;
+        background: #ebf1f7;
+        @include Two-Border-Radius(12px, 12px);
+        @include Flex();
+
+
+        img {
+          width: 15px;
+          height: 15px;
+          margin-right: 1rem;
+        }
+
+        input {
+          width: 80%;
+          height: 3rem;
+          font-size: $Font-Size - 5;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+
+    }
+
+    .Parent-Users {
+      width: 95%;
+      margin: 1rem;
+      margin: auto;
+
+      .Users {
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        @include Two-Margin-Padding(1rem, auto, true);
+        @include Two-Margin-Padding(1rem, 0rem, false);
+        @include Two-Border-Radius(15px, 15px);
+        @include Flex(flex, row, center, center)
+      }
+
+      .Avatar {
+        width: 20%;
+        height: 100%;
+        @include Flex(flex, row, center, center);
+
+        img {
+          width: 30px;
+          height: 30px;
+          @include Two-Border-Radius(50px, 50px)
+        }
+      }
+
+      .Info {
+        width: 75%;
+        height: 100%;
+        margin-right: 1rem;
+        @include Flex(flex, column, center, center);
+
+        .TimeAndInfo {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(.3rem, .3rem, false);
+          @include Flex(flex, row, space-between, center);
+
+
+          .Name-LastName {
+            font: {
+              size: $Font-Size - 4;
+              weight: $Font-Weight;
+            };
+          }
+
+          .Time {
+
+            color: rgba(0, 0, 0, 0.4);
+            font: {
+              size: $Font-Size - 5;
+              weight: $Font-Weight;
+            };
+
+          }
+
+        }
+
+        .PrevMessage {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding( 0rem, .3rem, false);
+          font-size: $Font-Size - 5;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+        }
+
+      }
+
+    }
+  }
+}

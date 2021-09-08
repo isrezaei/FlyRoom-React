@@ -1,0 +1,21 @@
+@media screen and (min-width: 0px) and (max-width: 320px){
+
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  body{
+    overflow-y: scroll;
+  }
+
+
+  .Master-Area
+  {
+    width: 100%;
+    height: 100%;
+    @include Flex(flex ,column , center , center);
+    transition: .5s;
+  }
+}

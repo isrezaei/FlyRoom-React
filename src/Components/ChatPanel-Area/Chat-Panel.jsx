@@ -12,8 +12,6 @@ import {MdKeyboardArrowRight} from 'react-icons/md'
 import {HiOutlineDotsVertical} from 'react-icons/hi'
 
 
-
-
 export default function ChatPanel({GetWidthSize , Dark_ChatPanel})
 {
     const Panel = useRef()

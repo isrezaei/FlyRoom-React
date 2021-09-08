@@ -1,0 +1,53 @@
+@media screen and (min-width: 0px) and (max-width: 320px)
+{
+  .Item-Area
+  {
+    width: 100%;
+    height: auto;
+    background: #fa0000;
+    @include Flex(flex , row , center , center);
+    order: 3;
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        display: none;
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , row , space-around , center);
+
+        div
+        {
+          @include Two-Margin-Padding( 2rem , 0 );
+
+          .Icone
+          {
+            font-size: 1.5em;
+            color: #707070;
+          }
+        }
+
+      }
+
+      .MyProfile
+      {
+       display: none;
+      }
+
+    }
+  }
+
+
+
+
+
+
+}
