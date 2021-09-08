@@ -4,8 +4,10 @@
   {
     width: 100%;
     height: auto;
-    background: #fa0000;
+    background: #ffffff;
     @include Flex(flex , row , center , center);
+    position: sticky;
+    bottom: 0;
     order: 3;
 
     .ParentIcon
@@ -26,11 +28,12 @@
 
         div
         {
-          @include Two-Margin-Padding( 2rem , 0 );
+          @include Two-Margin-Padding( .3rem , 0 );
+          @include Two-Margin-Padding( .5rem , 0 , false );
 
           .Icone
           {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #707070;
           }
         }
