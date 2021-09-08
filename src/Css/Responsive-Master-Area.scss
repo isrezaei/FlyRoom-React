@@ -1,13 +1,11 @@
 @media screen and (min-width: 0px) and (max-width: 480px){
 
 
-  //body::-webkit-scrollbar {
-  //  display: none;
-  //}
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-
-  body
-  {
+  * {
     overflow-y: scroll !important;
     overflow-x: hidden !important;
   }
