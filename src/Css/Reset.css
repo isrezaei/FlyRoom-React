@@ -19,9 +19,3 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-
-html
-{
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
-}
