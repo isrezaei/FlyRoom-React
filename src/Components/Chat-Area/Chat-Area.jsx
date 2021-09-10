@@ -22,7 +22,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
         Dark_ChatArea(RefChatArea)
         GetRefHome(RefGoHome)
 
-        RefGoHome.current.style.display = 'none'
+
 
 
     } , [MessageLenght])
@@ -63,7 +63,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
                         <div className='Sender-Recive-Avatar-Info'>
 
                             <div ref={RefGoHome} onClick={CloseChatArea} className='Click-To-Info'>
-                                <GoHome className='BackToHome'/>
+                                <img className='BackToHome' src="https://img.icons8.com/fluency/96/000000/home.png"/>
                             </div>
 
                             <div onClick={OpenPanel} className='Click-To-Info'>
