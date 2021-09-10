@@ -60,6 +60,12 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
                                 <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
                             </div>
 
+
+                            <div onClick={OpenPanel} className='Click-To-Info'>
+                                <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
+                            </div>
+
+
                             <img className='Reciver'/>
                             <img className='Sender'/>
 
