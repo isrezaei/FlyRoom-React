@@ -4,6 +4,7 @@
   height: 100%;
   @include Flex(flex , column , center , center);
   transition: .5s;
+  overflow-x: hidden;
 
 
   .Header-Chat
