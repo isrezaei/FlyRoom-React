@@ -105,8 +105,6 @@ export default function MasterArea ()
         Go_ToHome(Data)
     }
 
-
-
     const OpenChatArea = () =>
     {
 

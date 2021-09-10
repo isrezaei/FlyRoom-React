@@ -17,7 +17,7 @@
       height: auto;
       border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
       @include Flex(flex , row , center , center);
-      @include Two-Margin-Padding(.5rem , .5rem);
+      @include Two-Margin-Padding(0rem , 0rem);
 
 
       .Header-Avatar
@@ -145,7 +145,11 @@
       width: 100%;
       height: 100%;
       background: #ffffff;
-      overflow-y: scroll;
+      overflow :{
+        y: scroll;
+        x : hidden;
+      };
+
       @include Flex(flex , column , flex-start , center);
 
 

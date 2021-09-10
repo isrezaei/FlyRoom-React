@@ -1,8 +1,6 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
-import {GoHome} from 'react-icons/go'
-
 export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , Dark_ChatArea , CloseChatArea ,GetRefHome})
 {
 
@@ -21,8 +19,6 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
 
         Dark_ChatArea(RefChatArea)
         GetRefHome(RefGoHome)
-
-
 
 
     } , [MessageLenght])
