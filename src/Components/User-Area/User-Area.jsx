@@ -2,7 +2,7 @@ import React , {useEffect , useRef} from "react";
 import FakerData from "../Faker/Faker-Data";
 import UserInfo from "./User-Info";
 
-export default function UserArea({Avatar , Dark_UserArea , OpenChatArea_InResponsive})
+export default function UserArea({Avatar , Dark_UserArea , OpenChatArea})
 {
 
     const UserArea = useRef()
@@ -16,7 +16,7 @@ export default function UserArea({Avatar , Dark_UserArea , OpenChatArea_InRespon
     } , [])
 
    const User = FakerData().map( (value , index)=> {
-        return <UserInfo key={index} Value={value} Avatar={Avatar} OpenChatArea_InResponsive={OpenChatArea_InResponsive}/>
+        return <UserInfo key={index} Value={value} Avatar={Avatar} OpenChatArea_InResponsive={OpenChatArea}/>
     })
 
     return (

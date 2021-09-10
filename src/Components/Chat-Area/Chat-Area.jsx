@@ -3,12 +3,13 @@ import LeftRightChat from "./Left&Right-Chat";
 
 import {GoHome} from 'react-icons/go'
 
-export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , Dark_ChatArea})
+export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , Dark_ChatArea , CloseChatArea ,GetRefHome})
 {
 
 
     let RefBodyChat = useRef()
     let RefChatArea = useRef()
+    let RefGoHome = useRef()
 
     const [RefBodyMessage , SetRefBodyMessage] = useState()
 
@@ -19,6 +20,9 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
         SetRefBodyMessage(RefBodyChat)
 
         Dark_ChatArea(RefChatArea)
+        GetRefHome(RefGoHome)
+
+        RefGoHome.current.style.display = 'none'
 
 
     } , [MessageLenght])
@@ -58,7 +62,7 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
 
                         <div className='Sender-Recive-Avatar-Info'>
 
-                            <div onClick={OpenPanel} className='Click-To-Info'>
+                            <div ref={RefGoHome} onClick={CloseChatArea} className='Click-To-Info'>
                                 <GoHome className='BackToHome'/>
                             </div>
 

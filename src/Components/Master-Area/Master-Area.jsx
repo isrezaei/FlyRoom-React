@@ -19,6 +19,7 @@ export default function MasterArea ()
     const [State_UserArea , Dark_SetUserArea] = useState()
     const [State_ChatArea , Dark_SetChatArea] = useState()
     const [State_ChatPanel , Dark_SetChatPanel] = useState()
+    const [State_GoHome , Go_ToHome] = useState()
     //Set Statement
 
 
@@ -100,14 +101,37 @@ export default function MasterArea ()
     //Set Dark Mood By this Function
 
 
+    const GetRefHome = (Data) => {
+        Go_ToHome(Data)
+    }
 
-    const OpenChatArea_InResponsive = () =>
+
+
+    const OpenChatArea = () =>
     {
+
+        if (document.body.style.maxWidth)
+        {
             State_ChatArea.current.style.display = 'flex'
             State_UserArea.current.style.display = 'none'
             State_ItemArea.current.style.display = 'none'
+            State_GoHome.current.style.display = 'flex'
+        }
+
+
     }
 
+
+    const CloseChatArea = () =>
+    {
+        State_ChatArea.current.style.display = 'none'
+        State_UserArea.current.style.display = 'block'
+        State_ItemArea.current.style.display = 'flex'
+        State_GoHome.current.style.display = 'none'
+    }
+
+
+    console.log(document.body.style.maxWidth <= 480)
 
 
 
@@ -115,7 +139,7 @@ export default function MasterArea ()
         <div className='Master-Area'>
             <ItemArea Dark_ItemArea={Dark_ItemArea} OpenSettingPanel={OpenSettingPanel}/>
             {/***/}
-            <UserArea Dark_UserArea={Dark_UserArea}  OpenChatArea_InResponsive={OpenChatArea_InResponsive}/>
+            <UserArea Dark_UserArea={Dark_UserArea}  OpenChatArea={OpenChatArea}/>
             {/***/}
             {FakeMessage.Message &&
             <ChatArea
@@ -124,6 +148,8 @@ export default function MasterArea ()
                 SendMessage={SendMessage}
                 OpenPanel={OpenPanel}
                 Dark_ChatArea={Dark_ChatArea}
+                CloseChatArea={CloseChatArea}
+                GetRefHome={GetRefHome}
             />}
             {/***/}
             <ChatPanel GetWidthSize={GetWidthSize} Dark_ChatPanel={Dark_ChatPanel}/>

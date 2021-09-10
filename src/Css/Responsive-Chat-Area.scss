@@ -79,6 +79,7 @@
 
       .Click-To-Info
       {
+        margin-left: 1rem;
         @include Flex(flex , row , center , center);
         img
         {
@@ -86,6 +87,32 @@
           height: 15px;
         }
       }
+
+
+      .BackToHome
+      {
+        font-size: 1.5em;
+        color: #5959ff;
+        animation: zoom-in-zoom-out 1s ease infinite  ;
+      }
+
+      @keyframes zoom-in-zoom-out {
+        0% {
+          transform: scale(2, 2);
+        }
+        50% {
+          transform: scale(3, 3);
+        }
+        100% {
+          transform: scale(2, 2);
+        }
+      }
+
+
+
+
+
+
 
       .Sender-Recive-Avatar-Info
       {
