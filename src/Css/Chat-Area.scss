@@ -71,15 +71,6 @@
     }
 
 
-    .Click-To-Info
-    {
-      @include Flex(flex , row , center , center);
-      img
-      {
-        width: 30px;
-        height: 30px;
-      }
-    }
 
     .Sender-Recive-Avatar-Info
     {
@@ -105,11 +96,14 @@
         background: #4eb1d0;
       }
 
+      }
+
     }
 
     .Click-To-Info
     {
-      width: 20%;
+      @include Flex(flex , row , center , center);
+      width: 15%;
       height: 4rem;
       cursor: pointer;
       img
@@ -121,7 +115,35 @@
     }
 
 
+  .BackToHome
+  {
+    font-size: 1.5em;
+    color: #5959ff;
+    animation: zoom-in-zoom-out 1s ease infinite  ;
   }
+
+
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.3, 1.3);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+
+  }
+
+
+
+
+
+
+
 
 
 
@@ -361,7 +383,7 @@
     height: 2rem;
   }
 
-}
+
 
 
 .DarkMood-Chat-Area

@@ -2,7 +2,7 @@
 {
   .Chat-Area
   {
-    width: 98%;
+    width: 100%;
     height: 100%;
     @include Flex(flex , column , center , center);
     transition: .3s;

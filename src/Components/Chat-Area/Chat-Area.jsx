@@ -1,6 +1,8 @@
 import React , { useState , useEffect , useRef} from "react";
 import LeftRightChat from "./Left&Right-Chat";
 
+import {GoHome} from 'react-icons/go'
+
 export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,OpenPanel , Dark_ChatArea})
 {
 
@@ -57,13 +59,15 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
                         <div className='Sender-Recive-Avatar-Info'>
 
                             <div onClick={OpenPanel} className='Click-To-Info'>
-                                <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
+                                <GoHome className='BackToHome'/>
                             </div>
-
 
                             <div onClick={OpenPanel} className='Click-To-Info'>
                                 <img src="https://img.icons8.com/ios/50/000000/info--v1.png"/>
                             </div>
+
+
+
 
 
                             <img className='Reciver'/>

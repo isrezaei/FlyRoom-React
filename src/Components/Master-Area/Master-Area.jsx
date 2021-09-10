@@ -103,20 +103,9 @@ export default function MasterArea ()
 
     const OpenChatArea_InResponsive = () =>
     {
-        if (document.body.style.maxWidth <= '480px')
-        {
             State_ChatArea.current.style.display = 'flex'
             State_UserArea.current.style.display = 'none'
             State_ItemArea.current.style.display = 'none'
-        }
-       if (document.body.style.maxWidth > '480px'){
-           return null
-       }
-
-
-
-
-        console.log(document.body.style.maxWidth < '480px')
     }
 
 
