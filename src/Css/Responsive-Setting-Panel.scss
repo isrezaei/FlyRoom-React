@@ -1,0 +1,53 @@
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .Setting-Panel
+  {
+    @include Flex(flex , row , center , center);
+    width: 12.5rem;
+    height: 3rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1000;
+    backdrop-filter: blur(6px) saturate(180%);
+    -webkit-backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(186, 186, 186, 0.63);
+    @include Two-Border-Radius(15px , 15px);
+    @include Two-Margin-Padding(15px , 15px , false);
+    display: none;
+
+
+    .Dark-Mood
+    {
+      width: 100%;
+      height: 0rem !important;
+      @include Flex(flex , row , center , center);
+      margin-bottom: 5rem;
+
+      P
+      {
+        font: {
+          size: $Font-Size - 1;
+          weight: $Font-Weight;
+        };
+        margin-right: 3rem;
+      }
+
+      button
+      {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        border: none;
+        @include Flex();
+        margin: .2rem;
+      }
+
+      .Icone
+      {
+        color: rgba(0,0,0,0.7);
+      }
+
+    }
+  }
+}
