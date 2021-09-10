@@ -1,6 +1,6 @@
 import React , {useState , useEffect} from "react";
 
-export default function UserInfo ({Value})
+export default function UserInfo ({Value , OpenChatArea_InResponsive})
 {
     const [Profile , SetProfile] = useState()
     const [Name ,SetName] = useState()
@@ -17,13 +17,14 @@ export default function UserInfo ({Value})
         SetTime(Value.time)
         SetSentence(Value.sentence)
 
+
     } , [])
 
 
 
 
     return (
-        <div className='Users'>
+        <div onClick={OpenChatArea_InResponsive} className='Users'>
 
             <div className='Avatar'>
                 <img src={Profile}/>

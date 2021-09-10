@@ -100,11 +100,33 @@ export default function MasterArea ()
     //Set Dark Mood By this Function
 
 
+
+    const OpenChatArea_InResponsive = () =>
+    {
+        if (document.body.style.maxWidth <= '480px')
+        {
+            State_ChatArea.current.style.display = 'flex'
+            State_UserArea.current.style.display = 'none'
+            State_ItemArea.current.style.display = 'none'
+        }
+       if (document.body.style.maxWidth > '480px'){
+           return null
+       }
+
+
+
+
+        console.log(document.body.style.maxWidth < '480px')
+    }
+
+
+
+
     return (
         <div className='Master-Area'>
             <ItemArea Dark_ItemArea={Dark_ItemArea} OpenSettingPanel={OpenSettingPanel}/>
             {/***/}
-            <UserArea Dark_UserArea={Dark_UserArea}/>
+            <UserArea Dark_UserArea={Dark_UserArea}  OpenChatArea_InResponsive={OpenChatArea_InResponsive}/>
             {/***/}
             {FakeMessage.Message &&
             <ChatArea
