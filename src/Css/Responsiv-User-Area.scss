@@ -22,10 +22,10 @@
         height: 3rem;
         box-sizing: border-box;
         @include Flex(flex, row, flex-start, center);
-        @include Two-Margin-Padding(.5rem, .5rem, false);
+        @include Two-Margin-Padding(2rem, .5rem, false);
         color: $Font-Color-OF-HeaderName;
         font: {
-          size: $Font-Size + 8;
+          size: $Font-Size + 10;
           weight: $Font-Weight;
         };
       }
@@ -60,8 +60,8 @@
     .Parent-Users {
       width: 95%;
       height: 100%;
-      margin: 1rem;
-      margin: auto;
+      margin-top: 2rem !important;
+
 
       .Users {
         width: 100%;
