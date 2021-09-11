@@ -1,4 +1,4 @@
-@media screen and (min-width: 0px) and (max-width: 480px)
+@media screen and (min-width: 0px) and (max-width: 400px)
 {
   .Chat-Area
   {
@@ -79,7 +79,7 @@
 
       .Click-To-Info
       {
-        margin-left: 1rem;
+        margin-left: .5rem;
         @include Flex(flex , row , center , center);
         img
         {
@@ -93,6 +93,7 @@
       {
         display: block;
         animation: zoom-in-zoom-out 1s ease infinite  ;
+        margin-right: 1.5rem;
       }
 
       @keyframes zoom-in-zoom-out {

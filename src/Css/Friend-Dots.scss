@@ -6,9 +6,9 @@
   width: 7rem;
   height: 8rem;
   background: rgba( 176, 176, 176, 0.25 );
-
-  backdrop-filter: blur( 10px );
-  -webkit-backdrop-filter: blur( 10px );
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  background-color: rgba(186, 186, 186, 0.40);
   z-index: 1;
   @include Two-Border-Radius(6px , 6px);
   @include Two-Margin-Padding(.5rem , .5rem , false);
@@ -36,7 +36,7 @@
         size: $Font-Size;
         weight: $Font-Weight;
       };
-      color: $Font-Low_opacity;
+      color: #adadad !important;
     }
 
     .Icons
