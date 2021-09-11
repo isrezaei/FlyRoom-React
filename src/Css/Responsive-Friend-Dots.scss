@@ -1,0 +1,32 @@
+@media screen and (min-width: 0) and (max-width: 480px)
+{
+  .Friends-Dots {
+    position: absolute;
+    top: 5%;
+    right: 11%;
+    width: 7rem;
+    height: 8rem;
+
+
+
+    .DotsStyle
+    {
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+      p
+      {
+        font: {
+          size: $Font-Size - 3;
+          weight: $Font-Weight;
+        };
+        color: $Font-Low_opacity;
+      }
+
+      .Icons
+      {
+        width:  20px;
+        height: 20px;
+      }
+    }
+  }
+
+}

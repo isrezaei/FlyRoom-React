@@ -5,7 +5,10 @@
   right: 2%;
   width: 7rem;
   height: 8rem;
-  background: #f6f9fb;
+  background: rgba( 176, 176, 176, 0.25 );
+
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
   z-index: 1;
   @include Two-Border-Radius(6px , 6px);
   @include Two-Margin-Padding(.5rem , .5rem , false);
@@ -40,7 +43,7 @@
     {
       width:  23px;
       height: 23px;
-      opacity: 40%;
+      color: #adadad;
     }
   }
 
@@ -49,12 +52,12 @@
     @extend .DotsStyle ;
     p
     {
-    color: #f86565;
+    color: #f86565 !important;
     }
 
     .Icons
     {
-      color: red;
+      color: #f86565 !important;
     }
 
 
