@@ -5,7 +5,7 @@
   {
     display: none;
     width: 0;
-    height: 100%;
+    height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
 
 
@@ -13,7 +13,7 @@
     .Handel-Postion
     {
       width: 90%;
-      height: 1rem;
+      height: 3rem;
       margin: auto;
       box-sizing: border-box;
       @include Flex(flex , row ,space-between , center);
@@ -34,15 +34,15 @@
     .Profile-Media-Files
     {
       width: 90%;
-      height: 9rem;
+      height: 12rem;
       @include All-Margin-Padding(0rem , auto , 0 , auto);
 
       @include Flex(flex , column , center , center);
 
       .Image-Profile
       {
-        width: 55px;
-        height: 55px;
+        width: 70px;
+        height: 70px;
         background: #70eed7;
         @include Two-Border-Radius(100px , 100px);
         z-index: 1;
@@ -52,7 +52,7 @@
       {
         margin-top: .5rem;
         font: {
-          size: $Font-Size - 3;
+          size: $Font-Size - 2;
           weight: $Font-Weight ;
         };
       }
@@ -60,7 +60,7 @@
       .Item-Profile
       {
         width: 100%;
-        height: 2.5rem;
+        height: 3.5rem;
         margin-top: 1rem;
         background:#ebf1f7;
         box-sizing: border-box;
@@ -84,7 +84,7 @@
         .Active
         {
           width: 7rem;
-          height: 1.5rem;
+          height: 2.5rem;
           background: white;
           color: black;
           cursor: pointer;
