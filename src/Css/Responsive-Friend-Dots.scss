@@ -35,11 +35,9 @@
   .Friends-Dots {
     position: absolute;
     top: 5%;
-    right: 9%;
+    right: 10%;
     width: 7rem;
     height: 8rem;
-
-
 
     .DotsStyle
     {
@@ -47,15 +45,15 @@
       p
       {
         font: {
-          size: $Font-Size - 3;
+          size: $Font-Size;
           weight: $Font-Weight;
         };
       }
 
       .Icons
       {
-        width:  20px;
-        height: 20px;
+        width:  25px;
+        height: 25px;
       }
     }
   }

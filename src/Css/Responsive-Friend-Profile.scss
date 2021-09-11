@@ -70,7 +70,6 @@
 @media screen and (min-width: 400px) and (max-width: 768px){
   .Friend-Profile
   {
-
     width: 100%;
     margin: auto;
     @include Flex(flex , column , center , center);
@@ -92,7 +91,7 @@
         h1
         {
           font: {
-            size: $Font-Size - 3;
+            size: $Font-Size ;
             weight: $Font-Weight;
           };
         }
@@ -100,7 +99,7 @@
         p
         {
           font: {
-            size: $Font-Size - 4;
+            size: $Font-Size - 1;
             weight: $Font-Weight;
           };
 
@@ -119,7 +118,7 @@
 
         .Icone
         {
-          font-size: 20px;
+          font-size: 25px;
           color: rgba(0,0,0,0.4);
           transition: .5s;
           cursor: pointer;
