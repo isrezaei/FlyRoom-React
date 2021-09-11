@@ -52,11 +52,21 @@ export default function MasterArea ()
 
     //Main Panel
     const OpenPanel = () => {
-        console.log(WidthPanel)
-        return (
-            WidthPanel.style.width = '30%',
-                WidthPanel.style.display = 'block'
-        )
+
+        if (window.innerWidth > 1200)
+        {
+           return (
+               WidthPanel.style.width = '30%',
+                   WidthPanel.style.display = 'block'
+           )
+        }else {
+            return (
+                WidthPanel.style.width = '100%',
+                    WidthPanel.style.display = 'block',
+                    State_ChatArea.current.style.display = 'none'
+            )
+        }
+
     }
 
     const SettingPanelData = (Data) => {
@@ -150,7 +160,7 @@ export default function MasterArea ()
                 GetRefHome={GetRefHome}
             />}
             {/***/}
-            <ChatPanel GetWidthSize={GetWidthSize} Dark_ChatPanel={Dark_ChatPanel}/>
+            <ChatPanel GetWidthSize={GetWidthSize} Dark_ChatPanel={Dark_ChatPanel} State_ChatArea={State_ChatArea}/>
             {/***/}
             <SettingPanel SettingPanelData={SettingPanelData} SetDarkMood={SetDarkMood}/>
         </div>

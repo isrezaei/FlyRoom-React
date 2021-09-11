@@ -12,7 +12,7 @@ import {MdKeyboardArrowRight} from 'react-icons/md'
 import {HiOutlineDotsVertical} from 'react-icons/hi'
 
 
-export default function ChatPanel({GetWidthSize , Dark_ChatPanel})
+export default function ChatPanel({GetWidthSize , Dark_ChatPanel , State_ChatArea})
 {
     const Panel = useRef()
     const FriendProfile = useRef()
@@ -35,10 +35,23 @@ export default function ChatPanel({GetWidthSize , Dark_ChatPanel})
     } , [])
 
     const ClosePanel = () => {
-        return (
-            Panel.current.style.width = '0',
-                Panel.current.style.display = 'none'
-        )
+
+        if (window.innerWidth > 1200)
+        {
+            return(
+                Panel.current.style.width = '0',
+                    Panel.current.style.display = 'none'
+            )
+        }
+        else
+        {
+            return(
+                Panel.current.style.width = '0',
+                    Panel.current.style.display = 'none',
+                State_ChatArea.current.style.display = 'flex'
+            )
+        }
+
     }
 
     const GetActiveToProfile = () => {

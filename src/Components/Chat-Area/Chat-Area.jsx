@@ -20,7 +20,6 @@ export default function ChatArea ({SendMessage , UpdateMessage , MessageLenght ,
         Dark_ChatArea(RefChatArea)
         GetRefHome(RefGoHome)
 
-
     } , [MessageLenght])
 
 

@@ -1,0 +1,68 @@
+@media screen and (min-width: 0px) and (max-width: 480px){
+  .Friend-Profile
+  {
+
+    width: 100%;
+    margin: auto;
+    @include Flex(flex , column , center , center);
+    .Phone ,.Loaction ,.Email ,.Notifications
+    {
+      width: 90%;
+      height: 4.5rem;
+      @include Flex(flex , row , space-around , center);
+      border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
+
+
+       .Title-Panel
+       {
+         width: 50%;
+         box-sizing: border-box;
+         @include Flex(flex , column , space-between , flex-start);
+         @include Two-Margin-Padding(.5rem , .5rem , false);
+
+         h1
+         {
+           font: {
+             size: $Font-Size - 3;
+             weight: $Font-Weight;
+           };
+         }
+
+         p
+         {
+           font: {
+             size: $Font-Size - 4;
+             weight: $Font-Weight;
+           };
+           opacity: 50%;
+           margin-top: .5rem;
+         }
+       }
+
+
+
+      .Logo-Panel
+      {
+        width: 50%;
+        box-sizing: border-box;
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        @include Flex(flex , column , space-around , flex-end !important);
+
+        .Icone
+        {
+          font-size: 20px;
+          color: rgba(0,0,0,0.4);
+          transition: .5s;
+          cursor: pointer;
+        }
+
+        .Icone:hover
+        {
+          color: rgba(0,0,0,0.6);
+        }
+      }
+      @import "Checke-Input";
+    }
+
+  }
+}
