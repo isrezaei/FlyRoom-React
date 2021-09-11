@@ -75,7 +75,7 @@
     @include Flex(flex , column , center , center);
     .Phone ,.Loaction ,.Email ,.Notifications
     {
-      width: 90%;
+      width: 95%;
       height: 4.5rem;
       @include Flex(flex , row , space-around , center);
       border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
