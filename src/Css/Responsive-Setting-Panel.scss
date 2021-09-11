@@ -1,4 +1,4 @@
-@media screen and (min-width: 0px) and (max-width: 400px) {
+@media screen and (min-width: 0px) and (max-width: 340px) {
   .Setting-Panel
   {
     @include Flex(flex , row , center , center);
@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 340px) and (max-width: 768px) {
   .Setting-Panel
   {
     @include Flex(flex , row , center , center);
