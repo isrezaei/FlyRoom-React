@@ -1,6 +1,107 @@
-@media screen and (min-width: 0) and (max-width: 400px)
+@media screen and (min-width: 0px) and (max-width: 400px)
 {
+  .Chat-Panel
+  {
+    display: none;
+    width: 0;
+    height: 100vh;
+    border-left: 1px solid $Border-Left-Color-OF-Panel ;
 
+
+
+    .Handel-Postion
+    {
+      width: 90%;
+      height: 3rem;
+      margin: auto;
+      box-sizing: border-box;
+      @include Flex(flex , row ,space-between , center);
+      @include Two-Margin-Padding(1rem , 0rem , false);
+
+      .Icone
+      {
+        font-size: 20px;
+        color: rgba(0,0,0,0.4);
+        cursor: pointer;
+
+      }
+    }
+
+    .Profile-Media-Files
+    {
+      width: 90%;
+      height: 12rem;
+      @include All-Margin-Padding(0rem , auto , 0 , auto);
+
+      @include Flex(flex , column , center , center);
+
+      .Image-Profile
+      {
+        width: 70px;
+        height: 70px;
+        background: #70eed7;
+        @include Two-Border-Radius(100px , 100px);
+        z-index: 1;
+      }
+
+      .Name-Profile
+      {
+        margin-top: .5rem;
+        font: {
+          size: $Font-Size - 2;
+          weight: $Font-Weight ;
+        };
+      }
+
+      .Item-Profile
+      {
+        width: 100%;
+        height: 3.5rem;
+        margin-top: 1rem;
+        background:#ebf1f7;
+        box-sizing: border-box;
+        @include Flex(flex , row , space-around , center);
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        @include Two-Border-Radius(10px , 10px);
+
+        p
+        {
+          width: 7rem;
+          text-align: center;
+          cursor: pointer;
+
+          font: {
+            size: $Font-Size - 3;
+            weight: $Font-Weight;
+          };
+          color: rgba(0,0,0,0.5);
+        }
+
+        .Active
+        {
+          width: 7rem;
+          height: 2.5rem;
+          background: white;
+          color: black;
+          cursor: pointer;
+          transition: .5s;
+          @include Flex();
+          @include Two-Border-Radius(10px , 10px);
+          -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
+          box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
+        }
+      }
+    }
+
+
+  }
+
+
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px)
+{
   .Chat-Panel
   {
     display: none;

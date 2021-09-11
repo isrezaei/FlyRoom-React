@@ -1,4 +1,46 @@
-@media screen and (min-width: 0) and (max-width: 400px)
+@media screen and (min-width: 0px) and (max-width: 400px)
+{
+  .Friend-Media
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 70px;
+      height: 70px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size - 4;
+      };
+    }
+  }
+
+  .Friend-File
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 70px;
+      height: 70px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size - 4;
+      };
+    }
+  }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px)
 {
   .Friend-Media
   {

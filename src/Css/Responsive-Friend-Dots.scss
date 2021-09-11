@@ -29,3 +29,35 @@
   }
 
 }
+
+@media screen and (min-width: 400px) and (max-width: 768px)
+{
+  .Friends-Dots {
+    position: absolute;
+    top: 5%;
+    right: 9%;
+    width: 7rem;
+    height: 8rem;
+
+
+
+    .DotsStyle
+    {
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+      p
+      {
+        font: {
+          size: $Font-Size - 3;
+          weight: $Font-Weight;
+        };
+      }
+
+      .Icons
+      {
+        width:  20px;
+        height: 20px;
+      }
+    }
+  }
+
+}

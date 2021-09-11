@@ -53,3 +53,59 @@
 
 
 }
+
+@media screen and (min-width: 400px) and (max-width: 768px)
+{
+  .Item-Area
+  {
+    width: 100%;
+    height: auto;
+    @include Flex(flex , row , center , center);
+    position: sticky;
+    bottom: 0;
+    order: 3;
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        display: none;
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , row , space-around , center);
+
+        div
+        {
+          @include Two-Margin-Padding( .3rem , 0 );
+          @include Two-Margin-Padding( .5rem , 0 , false );
+
+          .Icone
+          {
+            font-size: 1.6em;
+            color: #707070;
+          }
+        }
+
+      }
+
+      .MyProfile
+      {
+        display: none;
+      }
+
+    }
+  }
+
+
+
+
+
+
+}

@@ -302,12 +302,14 @@
 
     .Footer-Input-Chat
     {
-      width: 95%;
+      width: 97%;
       position: sticky;
       bottom: 0;
       backdrop-filter: blur(3px) saturate(180%);
       -webkit-backdrop-filter: blur(3px) saturate(180%);
       background-color: rgba(255, 255, 255, 0.4);
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
 
       .Input-TypeChat
       {
@@ -368,6 +370,440 @@
           {
             width: 15px;
             height: 15px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+
+    /**For Margin Bottom For InputChat**/
+    .Footer-Input-Chat::after
+    {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1rem;
+    }
+
+  }
+
+
+  .DarkMood-Chat-Area
+  {
+    .Parent-Chats
+    {
+      background: #2B2B2B;
+    }
+
+    .Header-Chat
+    {
+      background: #2b2b2b;
+      border-bottom: 1px solid #494949;
+    }
+
+    .Name{
+
+      color: #dcdcdc !important;
+
+    }
+
+    .Status{
+      color: #dcdcdc !important;
+    }
+
+    .Click-To-Info
+    {
+      img
+      {
+        filter: invert(100);
+      }
+    }
+
+
+    .Footer-Input-Chat
+    {
+      background: rgba(43,43,43,0.25);
+      box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+      backdrop-filter: blur(7.3px);
+    }
+
+    .Input-TypeChat
+    {
+      background: #383534 !important;
+    }
+
+    .Input-Type
+    {
+      color: #939393!important;
+    }
+
+    .Icone
+    {
+      color: rgba(241, 241, 241, 0.4) !important;
+    }
+
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px)
+{
+  .Chat-Area
+  {
+    width: 100%;
+    height: 100%;
+    @include Flex(flex , column , center , center);
+    transition: .3s;
+    position: absolute;
+    bottom: 0;
+    display: none;
+
+
+    .Header-Chat
+    {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
+      @include Flex(flex , row , center , center);
+      @include Two-Margin-Padding(0rem , 0rem);
+
+
+      .Header-Avatar
+      {
+        width: 85%;
+        height: 100%;
+        @include Flex(flex , row , center , center);
+
+        .Avatar
+        {
+          width: 30%;
+          height: 100%;
+          margin: .5rem 0;
+          @include Flex(flex , row , center , center);
+
+          img
+          {
+            width: 50px;
+            height: 50px;
+            background: #e1b3b3;
+            @include Two-Border-Radius(50px , 50px )
+          }
+        }
+        .Name-StatusType
+        {
+          width: 70%;
+          height: 100%;
+          @include Flex(flex , column , center , center)
+        }
+
+        .Name{
+          font: {
+            size: $Font-Size + 1;
+            weight: $Font-Weight;
+          };
+          color: $Font-Color-OF-HeaderName;
+          margin-bottom: .2rem;
+        }
+
+        .Status{
+          font: {
+            size: $Font-Size - 4;
+            weight: $Font-Weight - 100 ;
+          };
+          color: $Font-Color-OF-TypeStatus;
+        }
+
+      }
+
+
+      .Header-Sender-and-Reciver-Avatar-Info
+      {
+        width: 20%;
+        height: auto;
+        margin: .5rem;
+        @include Flex(flex , row , center , center);
+      }
+
+
+      .Click-To-Info
+      {
+        margin-left: .5rem;
+        @include Flex(flex , row , center , center);
+        img
+        {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+
+      .BackToHome
+      {
+        display: block;
+        animation: zoom-in-zoom-out 1s ease infinite  ;
+        margin-right: 1.5rem;
+      }
+
+      @keyframes zoom-in-zoom-out {
+        0% {
+          transform: scale(1, 1);
+        }
+        50% {
+          transform: scale(1.3, 1.3);
+        }
+        100% {
+          transform: scale(1, 1);
+        }
+      }
+
+
+
+      .Sender-Recive-Avatar-Info
+      {
+        width: 70%;
+        height: 1rem;
+
+        @include Flex(flex , row , center , center);
+
+        .Sender
+        {
+          display: none;
+        }
+        .Reciver{
+          display: none;
+        }
+      }
+    }
+
+
+
+    .Parent-Chats::-webkit-scrollbar {
+      display: none;
+    }
+
+    .Parent-Chats
+    {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      overflow :{
+        y: scroll;
+        x : hidden;
+      };
+      @include Flex(flex , column , flex-start , center);
+
+      .Fake-Message-Block
+      {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .Body-Chat-Right
+      {
+        width: 100%;
+        @include Flex(flex , column , flex-start , flex-end);
+
+
+        .Send-Message
+        {
+          width: 100%;
+          height: auto;
+          @include Flex(flex , row , flex-end , flex-end);
+          @include Two-Margin-Padding(0rem , 0rem );
+        }
+        .Avatar-Area
+        {
+          width: 15%;
+          height: 100%;
+          @include Flex(flex , row , center , flex-end);
+
+          .Message-Avatar
+          {
+            width: 45px;
+            height: 45px;
+            background: #b7e18d;
+            @include Two-Border-Radius(50px , 50px);
+
+          }
+        }
+
+        .Text-Area
+        {
+          width: 70%;
+          height: auto;
+          background: #d7f1a4;
+          box-sizing: border-box;
+          @include Flex(flex , column , center , space-between);
+          @include Two-Border-Radius(10px , 10px);
+          @include Two-Margin-Padding(.5rem , 0rem);
+          @include Two-Margin-Padding(.3rem , .5rem , false)
+        }
+
+        .Sentence
+        {
+          width: 100%;
+          width: 100%;
+          text-align: left;
+          font : {
+            size: $Font-Size - 2;
+            weight: $Font-Weight ;
+          }
+          @include All-Margin-Padding( .5rem, 0, .5rem, 0, false);
+        }
+
+        .Time
+        {
+          width: 100%;
+          text-align: right;
+          font : {
+            size: $Font-Size - 5;
+            weight: $Font-Weight ;
+          }
+
+          @include All-Margin-Padding( .5rem, 0, .2rem, 0, false)
+        }
+      }
+
+
+
+      .Body-Chat-Left
+      {
+        width: 100%;
+        @include Flex(flex , column , flex-start , flex-start);
+
+        .Send-Message
+        {
+          width: 100%;
+          height: auto;
+          @include Flex(flex , row , flex-start , flex-end);
+          @include Two-Margin-Padding(0rem , 0rem );
+        }
+        .Avatar-Area
+        {
+          width: 15%;
+          height: 100%;
+          order: 1;
+          @include Flex(flex , row , center , flex-end);
+
+          .Message-Avatar
+          {
+            width: 45px;
+            height: 45px;
+            background: #a8e0ec;
+            @include Two-Border-Radius(50px , 50px);
+
+          }
+        }
+
+        .Text-Area
+        {
+          width: 70%;
+          height: auto;
+          background: #a7dbef;
+          box-sizing: border-box;
+          order: 2;
+          @include Flex(flex , column , center , space-between);
+          @include Two-Border-Radius(10px , 10px);
+          @include Two-Margin-Padding(.5rem , .4rem);
+          @include Two-Margin-Padding(.3rem , .8rem , false)
+        }
+
+        .Sentence
+        {
+          width: 100%;
+          width: 100%;
+          text-align: left;
+          font : {
+            size: $Font-Size - 2;
+            weight: $Font-Weight ;
+          }
+          @include All-Margin-Padding( .5rem, 0, .5rem, 0, false)
+        }
+
+        .Time
+        {
+          width: 100%;
+          text-align: left;
+          font : {
+            size: $Font-Size - 5;
+            weight: $Font-Weight ;
+          }
+
+          @include All-Margin-Padding( .5rem, 0, .2rem, 0, false)
+        }
+
+      }
+    }
+
+    .Footer-Input-Chat
+    {
+      width: 97%;
+      position: sticky;
+      bottom: 0;
+      backdrop-filter: blur(3px) saturate(180%);
+      -webkit-backdrop-filter: blur(3px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.4);
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+
+      .Input-TypeChat
+      {
+        width: 100%;
+        height: 4rem;
+        margin: auto;
+        background: #ebf1f7;
+        @include Two-Border-Radius(50px , 50px);
+        @include Flex(flex , row , space-around , center);
+
+        .Attach-File
+        {
+          .Icone
+          {
+            font-size: 20px;
+            color: rgba(0,0,0,0.4);
+            margin: 0 .5rem;
+            cursor: pointer;
+          }
+        }
+
+        .Input-Type
+        {
+          width: 85%;
+          height: 2.5rem;
+          border: none;
+          outline: none;
+          font-size: 15px;
+          background: transparent;
+          color: #3b3b3b;
+        }
+
+        .Emoji
+        {
+          .Icone
+          {
+            font-size: 20px;
+            color: rgba(0,0,0,0.4);
+            margin-right: .5rem;
+            cursor: pointer;
+          }
+        }
+
+        .Search-Button
+        {
+          width: 48px;
+          height: 40px;
+          outline: none;
+          border: none;
+          background: #5959ff;
+          cursor: pointer;
+          margin-right: .5rem;
+          @include Two-Border-Radius(50px , 50px);
+          @include Flex();
+
+
+          img
+          {
+            width: 25px;
+            height: 25px;
             margin-bottom: 2px;
           }
         }
