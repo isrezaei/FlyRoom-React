@@ -118,7 +118,7 @@ export default function MasterArea ()
     const OpenChatArea = () =>
     {
 
-        if (window.innerWidth < 1200)
+        if (window.innerWidth < 1024)
         {
             State_ChatArea.current.style.display = 'flex'
             State_UserArea.current.style.display = 'none'

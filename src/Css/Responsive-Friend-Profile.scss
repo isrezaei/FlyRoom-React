@@ -75,7 +75,7 @@
     @include Flex(flex , column , center , center);
     .Phone ,.Loaction ,.Email ,.Notifications
     {
-      width: 95%;
+      width: 90%;
       height: 4.5rem;
       @include Flex(flex , row , space-around , center);
       border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
@@ -92,6 +92,144 @@
         {
           font: {
             size: $Font-Size ;
+            weight: $Font-Weight;
+          };
+        }
+
+        p
+        {
+          font: {
+            size: $Font-Size - 3;
+            weight: $Font-Weight;
+          };
+
+          margin-top: .5rem;
+        }
+      }
+
+
+
+      .Logo-Panel
+      {
+        width: 50%;
+        box-sizing: border-box;
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        @include Flex(flex , column , space-around , flex-end !important);
+
+        .Icone
+        {
+          font-size: 25px;
+          color: rgba(0,0,0,0.4);
+          transition: .5s;
+          cursor: pointer;
+        }
+
+        .Icone:hover
+        {
+          color: rgba(0,0,0,0.6);
+        }
+      }
+      @import "Checke-Input";
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px){
+  .Friend-Profile
+  {
+    width: 100%;
+    margin: auto;
+    @include Flex(flex , column , center , center);
+    .Phone ,.Loaction ,.Email ,.Notifications
+    {
+      width: 90%;
+      height: 4.5rem;
+      @include Flex(flex , row , space-around , center);
+      border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
+
+      margin-top: .5rem;
+
+      .Title-Panel
+      {
+        width: 50%;
+        box-sizing: border-box;
+        @include Flex(flex , column , space-between , flex-start);
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+
+        h1
+        {
+          font: {
+            size: $Font-Size + 2;
+            weight: $Font-Weight;
+          };
+        }
+
+        p
+        {
+          font: {
+            size: $Font-Size - 1;
+            weight: $Font-Weight;
+          };
+
+          margin-top: .5rem;
+        }
+      }
+
+
+
+      .Logo-Panel
+      {
+        width: 50%;
+        box-sizing: border-box;
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        @include Flex(flex , column , space-around , flex-end !important);
+
+        .Icone
+        {
+          font-size: 25px;
+          color: rgba(0,0,0,0.4);
+          transition: .5s;
+          cursor: pointer;
+        }
+
+        .Icone:hover
+        {
+          color: rgba(0,0,0,0.6);
+        }
+      }
+      @import "Checke-Input";
+    }
+
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px){
+  .Friend-Profile
+  {
+    width: 100%;
+    margin: auto;
+    @include Flex(flex , column , center , center);
+    .Phone ,.Loaction ,.Email ,.Notifications
+    {
+      width: 90%;
+      height: 4.5rem;
+      @include Flex(flex , row , space-around , center);
+      border-bottom: 1px solid $Border-Bottom-Color-OF-Header;
+
+      margin-top: .5rem;
+
+      .Title-Panel
+      {
+        width: 50%;
+        box-sizing: border-box;
+        @include Flex(flex , column , space-between , flex-start);
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+
+        h1
+        {
+          font: {
+            size: $Font-Size + 2;
             weight: $Font-Weight;
           };
         }

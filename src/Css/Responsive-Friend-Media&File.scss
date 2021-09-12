@@ -81,3 +81,87 @@
   }
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 900px)
+{
+  .Friend-Media
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size + 2;
+      };
+    }
+  }
+
+  .Friend-File
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size + 2;
+      };
+    }
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px)
+{
+  .Friend-Media
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size + 2;
+      };
+    }
+  }
+
+  .Friend-File
+  {
+    width: 100%;
+    @include Flex(flex , column , center , center);
+    img
+    {
+      margin-top: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+    p
+    {
+      margin-top: .5rem;
+      font: {
+        size: $Font-Size + 2;
+      };
+    }
+  }
+
+}

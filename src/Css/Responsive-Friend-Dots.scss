@@ -59,3 +59,63 @@
   }
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 900px)
+{
+  .Friends-Dots {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    width: 7rem;
+    height: 8rem;
+
+    .DotsStyle
+    {
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+      p
+      {
+        font: {
+          size: $Font-Size;
+          weight: $Font-Weight;
+        };
+      }
+
+      .Icons
+      {
+        width:  25px;
+        height: 25px;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px)
+{
+  .Friends-Dots {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    width: 7rem;
+    height: 8rem;
+
+    .DotsStyle
+    {
+      @include Two-Margin-Padding(.5rem , .5rem , false);
+      p
+      {
+        font: {
+          size: $Font-Size;
+          weight: $Font-Weight;
+        };
+      }
+
+      .Icons
+      {
+        width:  25px;
+        height: 25px;
+      }
+    }
+  }
+
+}

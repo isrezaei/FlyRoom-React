@@ -264,3 +264,582 @@
     }
   }
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 900px)
+{
+
+  .User-Area {
+    width: 100%;
+    height: 100%;
+    overflow: {
+      x: hidden;
+      y: scroll;
+    };
+
+    .User-Search {
+      width: 90%;
+      height: 5rem;
+      margin: auto;
+
+      .Chats {
+        width: 100%;
+        height: 3rem;
+        box-sizing: border-box;
+        @include Flex(flex, row, flex-start, center);
+        @include Two-Margin-Padding(2rem, .5rem, false);
+        color: $Font-Color-OF-HeaderName;
+        font: {
+          size: $Font-Size + 17;
+          weight: $Font-Weight;
+        };
+      }
+
+      .Input-Search {
+        width: 100%;
+        height: 3rem;
+        background: #ebf1f7;
+        @include Two-Border-Radius(12px, 12px);
+        @include Flex();
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 1rem;
+        }
+        input {
+          width: 80%;
+          height: 3rem;
+          font-size: $Font-Size - 2;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    .Parent-Users {
+      width: 95%;
+      height: 100%;
+      margin-top: 3.5rem !important;
+
+      .Users {
+        width: 75%;
+        height: auto;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        @include Two-Margin-Padding(1rem, auto, true);
+        @include Two-Margin-Padding(1rem, 0rem, false);
+        @include Two-Border-Radius(15px, 15px);
+        @include Flex(flex, row, center, center)
+      }
+
+      .Avatar {
+        width: 20%;
+        height: 100%;
+        @include Flex(flex, row, center, center);
+
+        img {
+          width: 70px;
+          height: 70px;
+          @include Two-Border-Radius(50px, 50px)
+        }
+      }
+
+      .Info {
+        width: 75%;
+        height: 100%;
+        margin-right: 1rem;
+        @include Flex(flex, column, center, center);
+
+        .TimeAndInfo {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(.3rem, .3rem, false);
+          @include Flex(flex, row, space-between, center);
+
+
+          .Name-LastName {
+            font: {
+              size: $Font-Size + 1;
+              weight: $Font-Weight;
+            };
+          }
+
+          .Time {
+
+            color: rgba(0, 0, 0, 0.4);
+            font: {
+              size: $Font-Size - 4;
+              weight: $Font-Weight;
+            };
+
+          }
+
+        }
+
+        .PrevMessage {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding( 0rem, .3rem, false);
+          font-size: $Font-Size - 2;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1024px)
+{
+
+  .User-Area {
+    width: 100%;
+    height: 100%;
+    overflow: {
+      x: hidden;
+      y: scroll;
+    };
+
+    .User-Search {
+      width: 90%;
+      height: 5rem;
+      margin: auto;
+
+      .Chats {
+        width: 100%;
+        height: 3rem;
+        box-sizing: border-box;
+        @include Flex(flex, row, flex-start, center);
+        @include Two-Margin-Padding(2rem, .5rem, false);
+        color: $Font-Color-OF-HeaderName;
+        font: {
+          size: $Font-Size + 17;
+          weight: $Font-Weight;
+        };
+      }
+
+      .Input-Search {
+        width: 100%;
+        height: 3rem;
+        background: #ebf1f7;
+        @include Two-Border-Radius(12px, 12px);
+        @include Flex();
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 1rem;
+        }
+        input {
+          width: 80%;
+          height: 3rem;
+          font-size: $Font-Size - 2;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    .Parent-Users {
+      width: 95%;
+      height: 100%;
+      margin-top: 3.5rem !important;
+
+      .Users {
+        width: 85%;
+        height: auto;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
+        box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        @include Two-Margin-Padding(1rem, auto, true);
+        @include Two-Margin-Padding(1rem, 0rem, false);
+        @include Two-Border-Radius(15px, 15px);
+        @include Flex(flex, row, center, center)
+      }
+
+      .Avatar {
+        width: 20%;
+        height: 100%;
+        @include Flex(flex, row, center, center);
+
+        img {
+          width: 70px;
+          height: 70px;
+          @include Two-Border-Radius(50px, 50px)
+        }
+      }
+
+      .Info {
+        width: 75%;
+        height: 100%;
+        margin-right: 1rem;
+        @include Flex(flex, column, center, center);
+
+        .TimeAndInfo {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(.3rem, .3rem, false);
+          @include Flex(flex, row, space-between, center);
+
+
+          .Name-LastName {
+            font: {
+              size: $Font-Size + 1;
+              weight: $Font-Weight;
+            };
+          }
+
+          .Time {
+
+            color: rgba(0, 0, 0, 0.4);
+            font: {
+              size: $Font-Size - 4;
+              weight: $Font-Weight;
+            };
+
+          }
+
+        }
+
+        .PrevMessage {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding( 0rem, .3rem, false);
+          font-size: $Font-Size - 2;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1200px)
+{
+  .User-Area
+  {
+    width: 50%;
+    height: 100%;
+    overflow: {
+      x : hidden;
+      y: scroll;
+    };
+
+
+
+    .User-Search
+    {
+      width: 90%;
+      height: 8rem;
+      margin: auto;
+
+
+      .Chats
+      {
+        width: 100%;
+        height: 5rem;
+        box-sizing: border-box;
+        @include Flex(flex , row , flex-start , center);
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        color: $Font-Color-OF-HeaderName;
+        font: {
+          size: $Font-Size + 15;
+          weight: $Font-Weight;
+        };
+      }
+
+
+      .Input-Search
+      {
+        width: 100%;
+        height: 2.5rem;
+        background: #ebf1f7;
+        @include Two-Border-Radius(12px , 12px);
+        @include Flex();
+
+
+        img
+        {
+          width: 20px;
+          height: 20px;
+          margin-right: 1rem;
+        }
+
+        input
+        {
+          width: 80%;
+          height: 3rem;
+          font-size: $Font-Size - 3;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+
+    }
+
+    .Parent-Users
+    {
+      width: 95%;
+      margin: 1rem auto;
+
+      .Users
+      {
+        width: 100%;
+        height: 5rem;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.09);
+        box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
+        @include Two-Margin-Padding( 1rem , auto , true);
+        @include Two-Margin-Padding( 1rem , 0rem , false);
+        @include Two-Border-Radius(15px , 15px);
+        @include Flex(flex , row , center , center)
+      }
+
+      .Avatar
+      {
+        width: 25%;
+        height: 100%;
+        @include Flex(flex , row , center , center);
+
+        img{
+          width: 40px;
+          height: 40px;
+          @include Two-Border-Radius(50px , 50px)
+        }
+      }
+
+      .Info
+      {
+        width: 75%;
+        height: 100%;
+        margin-right: 1rem;
+        @include Flex(flex , column , center , center);
+
+        .TimeAndInfo
+        {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(.2rem , .2rem , false);
+          @include Flex(flex , row , space-between , center);
+
+
+
+          .Name-LastName
+          {
+            font: {
+              size: $Font-Size - 1;
+              weight: $Font-Weight;
+            };
+          }
+
+          .Time
+          {
+
+            color: rgba(0,0,0,0.4);
+            font: {
+              size: $Font-Size - 4;
+              weight: $Font-Weight;
+            };
+
+          }
+
+        }
+
+        .PrevMessage
+        {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(0rem , .2rem , false);
+          font-size: $Font-Size - 2;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+        }
+
+      }
+
+    }
+
+
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1800px)
+{
+  .User-Area
+  {
+    width: 40%;
+    height: 100%;
+    overflow: {
+      x : hidden;
+      y: scroll;
+    };
+
+
+
+    .User-Search
+    {
+      width: 90%;
+      height: 8rem;
+      margin: auto;
+
+
+      .Chats
+      {
+        width: 100%;
+        height: 5rem;
+        box-sizing: border-box;
+        @include Flex(flex , row , flex-start , center);
+        @include Two-Margin-Padding(.5rem , .5rem , false);
+        color: $Font-Color-OF-HeaderName;
+        font: {
+          size: $Font-Size + 15;
+          weight: $Font-Weight;
+        };
+      }
+
+
+      .Input-Search
+      {
+        width: 100%;
+        height: 2.5rem;
+        background: #ebf1f7;
+        @include Two-Border-Radius(12px , 12px);
+        @include Flex();
+
+
+        img
+        {
+          width: 20px;
+          height: 20px;
+          margin-right: 1rem;
+        }
+
+        input
+        {
+          width: 80%;
+          height: 3rem;
+          font-size: $Font-Size - 3;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+
+    }
+
+    .Parent-Users
+    {
+      width: 90%;
+      margin: 1rem auto;
+
+      .Users
+      {
+        width: 100%;
+        height: 6rem;
+        background: #ffffff;
+        -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.09);
+        box-sizing: border-box;
+        box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
+        @include Two-Margin-Padding( 1rem , auto , true);
+        @include Two-Margin-Padding( 1rem , 0rem , false);
+        @include Two-Border-Radius(15px , 15px);
+        @include Flex(flex , row , center , center)
+      }
+
+      .Avatar
+      {
+        width: 20%;
+        height: 100%;
+        @include Flex(flex , row , center , center);
+
+        img{
+          width: 45px;
+          height: 45px;
+          @include Two-Border-Radius(50px , 50px)
+        }
+      }
+
+      .Info
+      {
+        width: 75%;
+        height: 100%;
+        margin-right: 0rem;
+        @include Flex(flex , column , center , center);
+
+        .TimeAndInfo
+        {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(.2rem , .2rem , false);
+          @include Flex(flex , row , space-between , center);
+
+
+
+          .Name-LastName
+          {
+            font: {
+              size: $Font-Size - 2;
+              weight: $Font-Weight;
+            };
+          }
+
+          .Time
+          {
+            margin-right: .5rem;
+            color: rgba(0,0,0,0.4);
+            font: {
+              size: $Font-Size - 4;
+              weight: $Font-Weight;
+            };
+
+          }
+
+        }
+
+        .PrevMessage
+        {
+          width: 100%;
+          height: auto;
+          box-sizing: border-box;
+          @include Two-Margin-Padding(0rem , .1rem , false);
+          font-size: $Font-Size - 2;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+        }
+
+      }
+
+    }
+
+
+  }
+}

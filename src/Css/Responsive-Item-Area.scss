@@ -109,3 +109,291 @@
 
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 900px)
+{
+  .Item-Area
+  {
+    width: 100%;
+    height: auto;
+    @include Flex(flex , row , center , center);
+    position: sticky;
+    bottom: 0;
+    order: 3;
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        display: none;
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , row , space-around , center);
+
+        div
+        {
+          @include Two-Margin-Padding( .3rem , 0 );
+          @include Two-Margin-Padding( .5rem , 0 , false );
+
+          .Icone
+          {
+            font-size: 1.6em;
+            color: #707070;
+          }
+        }
+
+      }
+
+      .MyProfile
+      {
+        display: none;
+      }
+
+    }
+  }
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px)
+{
+  .Item-Area
+  {
+    width: 100%;
+    height: auto;
+    @include Flex(flex , row , center , center);
+    position: sticky;
+    bottom: 0;
+    order: 3;
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        display: none;
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , row , space-around , center);
+
+        div
+        {
+          @include Two-Margin-Padding( .3rem , 0 );
+          @include Two-Margin-Padding( .5rem , 0 , false );
+
+          .Icone
+          {
+            font-size: 1.6em;
+            color: #707070;
+          }
+        }
+
+      }
+
+      .MyProfile
+      {
+        display: none;
+      }
+
+    }
+  }
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px)
+{
+  .Item-Area
+  {
+    width: 5%;
+    height: 100%;
+    @include Flex(flex , row , center , center);
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        width: 100%;
+        height: 7rem;
+        @include Flex(flex , row , center , center);
+        @include Two-Margin-Padding(2rem , 2rem , false);
+
+        img
+        {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , Column , center , center);
+
+        div
+        {
+          @include Two-Margin-Padding( 2rem , 0 );
+
+          .Icone
+          {
+            font-size: 1.2em;
+            color: #707070;
+          }
+        }
+
+        .Setting
+        {
+          -webkit-animation:spin 4s linear infinite;
+          -moz-animation:spin 4s linear infinite;
+          animation:spin 4s linear infinite;
+
+          svg
+          {
+            color: #5959ff !important;
+          }
+
+        }
+
+
+      }
+
+      .MyProfile
+      {
+
+        width: 100%;
+        height: 13rem;
+        @include Flex();
+
+
+        img
+        {
+          width: 30px;
+          height: 30px;
+          background: #de6666;
+          @include Two-Border-Radius(50px , 50px)
+        }
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1800px)
+{
+  .Item-Area
+  {
+    width: 5%;
+    height: 100%;
+    @include Flex(flex , row , center , center);
+
+    .ParentIcon
+    {
+      width: 100%;
+      height: 100%;
+      @include Flex(flex , Column , space-between , center);
+
+      .Logo
+      {
+        width: 100%;
+        height: 7rem;
+        @include Flex(flex , row , center , center);
+        @include Two-Margin-Padding(2rem , 2rem , false);
+
+        img
+        {
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      .Item
+      {
+        width: 100%;
+        @include Flex(flex , Column , center , center);
+
+        div
+        {
+          @include Two-Margin-Padding( 2rem , 0 );
+
+          .Icone
+          {
+            font-size: 1.5em;
+            color: #707070;
+          }
+        }
+
+        .Setting
+        {
+          -webkit-animation:spin 4s linear infinite;
+          -moz-animation:spin 4s linear infinite;
+          animation:spin 4s linear infinite;
+
+          svg
+          {
+            color: #5959ff !important;
+          }
+
+        }
+
+
+      }
+
+      .MyProfile
+      {
+
+        width: 100%;
+        height: 13rem;
+        @include Flex();
+
+
+        img
+        {
+          width: 45px;
+          height: 45px;
+          background: #de6666;
+          @include Two-Border-Radius(50px , 50px)
+        }
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+}

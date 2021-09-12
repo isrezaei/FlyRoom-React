@@ -123,15 +123,6 @@
 
   }
 
-
-
-
-
-
-
-
-
-
   .Parent-Chats::-webkit-scrollbar {
     display: none;
   }
@@ -311,6 +302,7 @@
 
       .Attach-File
       {
+        @include Flex();
         .Icone
         {
           font-size: 25px;
@@ -333,6 +325,7 @@
 
       .Emoji
       {
+        @include Flex();
         .Icone
         {
           font-size: 25px;
