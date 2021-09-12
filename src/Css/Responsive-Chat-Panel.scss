@@ -3,10 +3,12 @@
   .Chat-Panel
   {
     display: none;
-    width: 0;
+    width: 100%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
-
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
 
     .Handel-Postion
@@ -95,9 +97,6 @@
 
 
   }
-
-
-
 }
 
 @media screen and (min-width: 400px) and (max-width: 768px)
@@ -105,9 +104,12 @@
   .Chat-Panel
   {
     display: none;
-    width: 0;
+    width: 100%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
 
 
@@ -205,9 +207,12 @@
   .Chat-Panel
   {
     display: none;
-    width: 0;
+    width: 100%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
 
 
@@ -308,6 +313,9 @@
     width: 100%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
 
 
@@ -405,10 +413,11 @@
   .Chat-Panel
   {
     display: none;
-    width: 0;
+    width: 100%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
-
+    position: absolute;
+    right: 0;
 
 
     .Handel-Postion
@@ -505,7 +514,7 @@
   .Chat-Panel
   {
     display: none;
-    width: 0;
+    width: 30%;
     height: 100vh;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
 

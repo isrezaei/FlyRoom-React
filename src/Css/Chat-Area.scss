@@ -3,9 +3,9 @@
   width: 90%;
   height: 100%;
   @include Flex(flex , column , center , center);
-  transition: .5s;
   overflow-x: hidden;
-
+  display: flex;
+  background: white;
 
   .Header-Chat
   {
@@ -118,6 +118,7 @@
   .BackToHome
   {
     display: none;
+    visibility: hidden;
   }
 
 
@@ -131,7 +132,6 @@
   {
     width: 100%;
     height: 100%;
-    background: #ffffff;
     overflow-y: scroll;
     @include Flex(flex , column , flex-start , center);
 

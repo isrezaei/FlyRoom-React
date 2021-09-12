@@ -52,21 +52,9 @@ export default function MasterArea ()
 
     //Main Panel
     const OpenPanel = () => {
-
-        if (window.innerWidth > 1200)
-        {
            return (
-               WidthPanel.style.width = '30%',
                    WidthPanel.style.display = 'block'
            )
-        }else {
-            return (
-                WidthPanel.style.width = '100%',
-                    WidthPanel.style.display = 'block',
-                    State_ChatArea.current.style.display = 'none'
-            )
-        }
-
     }
 
     const SettingPanelData = (Data) => {
@@ -117,18 +105,14 @@ export default function MasterArea ()
 
     const OpenChatArea = () =>
     {
-            State_ChatArea.current.style.display = 'flex'
-            State_UserArea.current.style.display = 'none'
-            State_ItemArea.current.style.display = 'none'
+            State_ChatArea.current.style.zIndex = '1'
             State_GoHome.current.style.display = 'flex'
     }
 
 
     const CloseChatArea = () =>
     {
-        State_ChatArea.current.style.display = 'none'
-        State_UserArea.current.style.display = 'block'
-        State_ItemArea.current.style.display = 'flex'
+        State_ChatArea.current.style.zIndex = '-1'
         State_GoHome.current.style.display = 'none'
     }
 

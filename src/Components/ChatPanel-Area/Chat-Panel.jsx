@@ -35,23 +35,9 @@ export default function ChatPanel({GetWidthSize , Dark_ChatPanel , State_ChatAre
     } , [])
 
     const ClosePanel = () => {
-
-        if (window.innerWidth > 1200)
-        {
-            return(
-                Panel.current.style.width = '0',
-                    Panel.current.style.display = 'none'
-            )
-        }
-        else
-        {
-            return(
-                Panel.current.style.width = '0',
-                    Panel.current.style.display = 'none',
-                State_ChatArea.current.style.display = 'flex'
-            )
-        }
-
+        return(
+            Panel.current.style.display = 'none'
+        )
     }
 
     const GetActiveToProfile = () => {
@@ -104,23 +90,23 @@ export default function ChatPanel({GetWidthSize , Dark_ChatPanel , State_ChatAre
     return (
         <div ref={Panel} className='Chat-Panel'>
 
-                <div style={OpenDots} ref={FriendsDots} className='Friends-Dots'>
+            <div style={OpenDots} ref={FriendsDots} className='Friends-Dots'>
 
-                    <div className='DotsStyle'>
-                        <p>Mute</p>
-                        <BiVolumeMute className={'Icons'}/>
-
-                    </div>
-                    <div className='DotsStyle'>
-                        <p>Pin</p>
-                        <TiPinOutline className={'Icons'}/>
-                    </div>
-                    <div className='Block'>
-                        <p>Block</p>
-                        <CgBlock className={'Icons'}/>
-                    </div>
+                <div className='DotsStyle'>
+                    <p>Mute</p>
+                    <BiVolumeMute className={'Icons'}/>
 
                 </div>
+                <div className='DotsStyle'>
+                    <p>Pin</p>
+                    <TiPinOutline className={'Icons'}/>
+                </div>
+                <div className='Block'>
+                    <p>Block</p>
+                    <CgBlock className={'Icons'}/>
+                </div>
+
+            </div>
 
             {/*Header-Panel*/}
             <div style={stylePanelIcon}  className='Handel-Postion'>
@@ -160,7 +146,7 @@ export default function ChatPanel({GetWidthSize , Dark_ChatPanel , State_ChatAre
                         <p>USA, Houston</p>
                     </div>
                     <div className='Logo-Panel'>
-                       <HiOutlineLocationMarker className={'Icone'}/>
+                        <HiOutlineLocationMarker className={'Icone'}/>
                     </div>
                 </div>
 
