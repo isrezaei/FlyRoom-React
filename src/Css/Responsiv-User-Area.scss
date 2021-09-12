@@ -139,10 +139,7 @@
   .User-Area {
     width: 100%;
     height: 100%;
-    overflow: {
-      x: hidden;
-      y: scroll;
-    };
+    overflow: hidden;
 
     .User-Search {
       width: 90%;

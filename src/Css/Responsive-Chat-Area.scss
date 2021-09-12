@@ -447,6 +447,7 @@
     @include Flex(flex , column , center , center);
     transition: .3s;
     position: fixed;
+    overflow: hidden;
     bottom: 0;
     z-index: -1;
 

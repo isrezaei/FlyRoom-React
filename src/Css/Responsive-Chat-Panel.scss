@@ -105,9 +105,10 @@
   {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border-left: 1px solid $Border-Left-Color-OF-Panel ;
     position: fixed;
+    overflow: hidden;
     bottom: 0;
     z-index: 1;
 
