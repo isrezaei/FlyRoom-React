@@ -62,6 +62,7 @@
         box-sizing: border-box;
         -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
         box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        pointer-events: auto;
         @include Two-Margin-Padding(1rem, auto, true);
         @include Two-Margin-Padding(1rem, 0rem, false);
         @include Two-Border-Radius(15px, 15px);
@@ -196,6 +197,7 @@
         box-sizing: border-box;
         -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
         box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        pointer-events: auto;
         @include Two-Margin-Padding(1rem, auto, true);
         @include Two-Margin-Padding(1rem, 0rem, false);
         @include Two-Border-Radius(15px, 15px);
@@ -330,6 +332,7 @@
         box-sizing: border-box;
         -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
         box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        pointer-events: auto;
         @include Two-Margin-Padding(1rem, auto, true);
         @include Two-Margin-Padding(1rem, 0rem, false);
         @include Two-Border-Radius(15px, 15px);
@@ -400,7 +403,7 @@
 }
 
 
-@media screen and (min-width: 900px) and (max-width: 1024px)
+@media screen and (min-width: 900px) and (max-width: 1200px)
 {
 
   .User-Area {
@@ -464,6 +467,7 @@
         box-sizing: border-box;
         -webkit-box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.09);
         box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.03);
+        pointer-events: auto;
         @include Two-Margin-Padding(1rem, auto, true);
         @include Two-Margin-Padding(1rem, 0rem, false);
         @include Two-Border-Radius(15px, 15px);
@@ -534,7 +538,7 @@
 }
 
 
-@media screen and (min-width: 1024px) and (max-width: 1200px)
+@media screen and (min-width: 1200px) and (max-width: 1430px)
 {
   .User-Area
   {
@@ -611,6 +615,7 @@
         box-sizing: border-box;
         -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.09);
         box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.03);
+        pointer-events: none;
         @include Two-Margin-Padding( 1rem , auto , true);
         @include Two-Margin-Padding( 1rem , 0rem , false);
         @include Two-Border-Radius(15px , 15px);
@@ -689,7 +694,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1800px)
+@media screen and (min-width: 1430px) and (max-width: 1800px)
 {
   .User-Area
   {
