@@ -1,24 +1,21 @@
 import React , {Component} from "react";
 import SendLogo from '../../Images/Icons/icons8-forward-arrow-100 .png'
 import { animations } from 'react-animation'
-import {HiOutlineDocumentAdd} from 'react-icons/hi'
-import {HiOutlineEmojiHappy} from 'react-icons/hi'
+import MapInFakeMessage from "./Map-In-Fake-Message";
+import FooterForSendMessage from "./Footer-For-Send-Message";
 
 const InterStyleChat = {
     animation: animations.fadeIn
 }
 
-
 export default class LeftRightChat extends Component{
 
     constructor(props) {
         super(props);
-
         this.state = {
             InputValue : ''
         }
     }
-
 
     componentDidMount() {
         this.props.RefBodyMessage.current.scrollTop = 3051
@@ -29,7 +26,6 @@ export default class LeftRightChat extends Component{
         {
             const Element = this.props.RefBodyMessage.current
             return Element.scrollHeight - Element.scrollTop
-            console.log(Element)
         }
         return null
     }
@@ -46,7 +42,6 @@ export default class LeftRightChat extends Component{
         this.setState({
             InputValue : e.target.value
         })
-
     }
 
     SendInputSearchValue = () => {
@@ -64,76 +59,25 @@ export default class LeftRightChat extends Component{
                 InputValue : ''
             })
         }
-
     }
 
 
 
     render() {
-
-        const FakeMessage = this.props.MessageLenght.Message.map((value , index)=>{
-            return (
-                <div style={InterStyleChat} key={index} className={value.checked ? 'Body-Chat-Right' : 'Body-Chat-Left'}>
-                    <div  className='Send-Message'>
-
-                        <div className='Text-Area'>
-
-                            <div className='Sentence'>
-                                {value.sentence}
-                            </div>
-
-                            <div className='Time'>
-                                {value.time}
-                            </div>
-
-                        </div>
-
-                        <div className='Avatar-Area'>
-                            <div className={'Message-Avatar'}></div>
-                        </div>
-
-                    </div>
-                </div>
-            )
-        })
-
-
-
-
         return (
             <>
+                <MapInFakeMessage
+                    InterStyleChat={InterStyleChat}
+                    MessageLenght={this.props.MessageLenght}
+                />
 
-                <div style={InterStyleChat} className='Fake-Message-Block'>
-                    {FakeMessage}
-                </div>
-
-                <div className='Footer-Input-Chat'>
-
-                    <div className='Input-TypeChat'>
-
-                        <div className='Attach-File'>
-                           <HiOutlineDocumentAdd className={'Icone'}/>
-                        </div>
-
-                        <input onKeyPress={this.KeyBoard_SendInputSearchValue}
-                               onChange={this.HandelChenge}
-                               value={this.state.InputValue}
-                               placeholder='Type your message...'
-                               className='Input-Type'/>
-
-                        <div className='Emoji'>
-                            <HiOutlineEmojiHappy className={'Icone'}/>
-                        </div>
-
-                        <button className='Search-Button' onClick={this.SendInputSearchValue}>
-                            <img src={SendLogo}/>
-                        </button>
-
-                    </div>
-
-
-                </div>
-
+                <FooterForSendMessage
+                    KeyBoard_SendInputSearchValue={this.KeyBoard_SendInputSearchValue}
+                    HandelChenge={this.HandelChenge}
+                    InputValue={this.state.InputValue}
+                    SendInputSearchValue={this.SendInputSearchValue}
+                    SendLogo={SendLogo}
+                />
             </>
         )
     }

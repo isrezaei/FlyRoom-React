@@ -3,7 +3,7 @@ import ChatArea from "../Chat-Area/Chat-Area";
 import ItemArea from "../Item-Area/Item-Area";
 import UserArea from "../User-Area/User-Area";
 import MessageFaker from "../Faker/Message-Faker";
-import ChatPanel from "../ChatPanel-Area/Chat-Panel";
+import ChatPanel from "../Chat-Panel-Area/Chat-Panel";
 import SettingPanel from "../Setting-Panel/Setting-Panel";
 
 export default function MasterArea ()
@@ -21,7 +21,6 @@ export default function MasterArea ()
     const [State_ChatPanel , Dark_SetChatPanel] = useState()
     const [State_GoHome , Go_ToHome] = useState()
     //Set Statement
-
 
     //Scroll up and show unread message
     const UpdateMessage = () => {
@@ -52,9 +51,9 @@ export default function MasterArea ()
 
     //Main Panel
     const OpenPanel = () => {
-           return (
-                   WidthPanel.style.display = 'block'
-           )
+        return (
+            WidthPanel.style.display = 'block'
+        )
     }
 
     const SettingPanelData = (Data) => {
@@ -66,7 +65,6 @@ export default function MasterArea ()
         State_Setting.current.style.display = 'flex'
     }
     //Get information style of inside panel
-
 
 
     //Get Refs Of All Parent Element For Dark Mood
@@ -99,14 +97,15 @@ export default function MasterArea ()
     //Set Dark Mood By this Function
 
 
+    //Open Chat Panel in Responsive Mood
     const GetRefHome = (Data) => {
         Go_ToHome(Data)
     }
 
     const OpenChatArea = () =>
     {
-            State_ChatArea.current.style.zIndex = '1'
-            State_GoHome.current.style.display = 'flex'
+        State_ChatArea.current.style.zIndex = '1'
+        State_GoHome.current.style.display = 'flex'
     }
 
 
@@ -115,10 +114,7 @@ export default function MasterArea ()
         State_ChatArea.current.style.zIndex = '-1'
         State_GoHome.current.style.display = 'none'
     }
-
-
-    console.log(window.innerWidth)
-
+    //Open Chat Panel in Responsive Mood
 
 
     return (

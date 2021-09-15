@@ -1,43 +1,24 @@
 import React , {useEffect , useRef} from "react";
-import FakerData from "../Faker/Faker-Data";
-import UserInfo from "./User-Info";
+import HeaderSearchInUsers from "./Header-Search-In-Users";
+import MapInFakerData from "./Map-In-Faker-Data";
 
-export default function UserArea({Avatar , Dark_UserArea , OpenChatArea})
+
+export default function UserArea({Dark_UserArea , OpenChatArea})
 {
-
     const UserArea = useRef()
-
 
     useEffect(()=>{
 
+        //Set Ref of User Area for Dark Mood
         Dark_UserArea(UserArea)
-
 
     } , [])
 
-   const User = FakerData().map( (value , index)=> {
-        return <UserInfo key={index} Value={value} Avatar={Avatar} OpenChatArea_InResponsive={OpenChatArea}/>
-    })
 
     return (
         <div ref={UserArea} className='User-Area'>
-
-            <div className='User-Search'>
-
-
-                <div className='Chats'>
-                    <p>Chats</p>
-                </div>
-
-                <div className='Input-Search'>
-                    <img src="https://img.icons8.com/ios/100/000000/search--v1.png"/>
-                    <input placeholder='Search messages or users'/>
-                </div>
-
-            </div>
-
-
-            <div className='Parent-Users'>{User}</div>
+            <HeaderSearchInUsers/>
+            <MapInFakerData OpenChatArea={OpenChatArea}/>
         </div>
     )
 }

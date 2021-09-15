@@ -4,13 +4,10 @@ import { IoReturnUpBackOutline } from 'react-icons/io5';
 
 export default function SettingPanel ({SettingPanelData , SetDarkMood})
 {
-
     const SettingPanel = useRef()
 
     useEffect(()=>{
-
         SettingPanelData(SettingPanel)
-
     } , [])
 
 
@@ -19,22 +16,13 @@ export default function SettingPanel ({SettingPanelData , SetDarkMood})
         SettingPanel.current.style.display ='none'
     }
 
-
     return (
         <div ref={SettingPanel} className='Setting-Panel'>
-
-
-
             <div className='Dark-Mood'>
                 <p>Dark Mood</p>
                 <button onClick={SetDarkMood}><WiMoonAltWaningCrescent1 className='Icone'/></button>
                 <button onClick={ClosePanelSetting}><IoReturnUpBackOutline className='Icone'/></button>
             </div>
-
-
-
-
-
         </div>
     )
 }
