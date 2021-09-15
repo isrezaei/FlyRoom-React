@@ -105,14 +105,14 @@ export default function MasterArea ()
     const OpenChatArea = () =>
     {
         State_ChatArea.current.style.zIndex = '1'
-        State_GoHome.current.style.display = 'flex'
+        State_GoHome.current.style.visibility = 'visible'
     }
 
 
     const CloseChatArea = () =>
     {
         State_ChatArea.current.style.zIndex = '-1'
-        State_GoHome.current.style.display = 'none'
+        State_GoHome.current.style.visibility = 'hidden'
     }
     //Open Chat Panel in Responsive Mood
 
