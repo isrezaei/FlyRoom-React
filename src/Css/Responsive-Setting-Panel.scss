@@ -22,7 +22,7 @@
       width: 100%;
       height: 0rem;
       @include Flex(flex , row , center , center);
-      margin-bottom: 5rem;
+      margin-bottom: 0rem;
 
       P
       {
@@ -78,7 +78,7 @@
       width: 100%;
       height: 0rem;
       @include Flex(flex , row , center , center);
-      margin-bottom: 5rem;
+      margin-bottom: 0rem;
 
       P
       {
@@ -134,7 +134,7 @@
       width: 100%;
       height: 0rem;
       @include Flex(flex , row , center , center);
-      margin-bottom: 5rem;
+      margin-bottom: 0rem;
 
       P
       {
@@ -190,7 +190,7 @@
       width: 100%;
       height: 0rem;
       @include Flex(flex , row , center , center);
-      margin-bottom: 5rem;
+      margin-bottom: 0rem;
 
       P
       {
@@ -221,3 +221,5 @@
     }
   }
 }
+
+
